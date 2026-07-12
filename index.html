@@ -7,7 +7,7 @@
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); min-height:100vh; display:flex; justify-content:center; padding:10px 0; }
-.container { width:430px; background:#f8f9fc; border-radius:16px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3); }
+.container { width:430px; background:#f8f9fc; border-radius:16px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.3); display:flex; flex-direction:column; min-height:100vh; }
 .header { background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); padding:24px 20px; text-align:center; color:#fff; }
 .header h1 { font-size:22px; font-weight:700; letter-spacing:2px; }
 .header .subtitle { font-size:12px; opacity:0.85; margin-top:6px; }
@@ -85,7 +85,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
 .td-store { font-size:9px; color:#6b7280; text-align:left; }
 .td-sales { color:#4b5563; }
 
-.footer { text-align:center; padding:16px; font-size:10px; color:#9ca3af; }
+.footer { text-align:center; padding:16px; font-size:10px; color:#9ca3af; margin-top:auto; }
 </style>
 </head>
 <body>
@@ -747,7 +747,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
     </div>
   </div>
 
-  <!-- P4 每周龙虎榜 -->
+    <!-- P4 每周龙虎榜 -->
   <div class="tab-content" id="p4">
 
     <div class="sub-tabs">
@@ -765,7 +765,10 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
         <tr><td class="td-rank">6</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果上海松江印象城店</td><td class="td-sales">瞿庭庭</td><td>3</td><td>38097</td><td></td></tr>
         <tr><td class="td-rank">7</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州新北万达店</td><td class="td-sales">陈志鹏</td><td>3</td><td>34498</td><td></td></tr>
         <tr><td class="td-rank">8</td><td class="td-team">黑马队</td><td class="td-store">苹果余姚万达店</td><td class="td-sales">凌红</td><td>3</td><td>31497</td><td></td></tr>
-        </tbody></table></div>      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff">iPad</div>
+        <tr><td class="td-rank">9</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">王舰涛</td><td>3</td><td>29247</td><td></td></tr>
+        <tr><td class="td-rank">10</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">巩欣萍</td><td>3</td><td>28497</td><td></td></tr>
+        </tbody></table></div>
+      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff">iPad</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
         <tr><td class="td-rank">🥇</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">王舰涛</td><td>7</td><td>61993</td><td>1</td></tr>
         <tr><td class="td-rank">🥈</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州永旺梦乐城店</td><td class="td-sales">胡秀彬</td><td>6</td><td>40095</td><td>1</td></tr>
@@ -775,7 +778,10 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
         <tr><td class="td-rank">6</td><td class="td-team">黑马队</td><td class="td-store">苹果宁海西子国际店</td><td class="td-sales">秦礼意</td><td>5</td><td>33595</td><td></td></tr>
         <tr><td class="td-rank">7</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">谢海燕2</td><td>5</td><td>33395</td><td></td></tr>
         <tr><td class="td-rank">8</td><td class="td-team">战狼队</td><td class="td-store">苹果上海嘉亭荟店</td><td class="td-sales">何硕影</td><td>5</td><td>32195</td><td></td></tr>
-        </tbody></table></div>      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#4facfe,#00f2fe);color:#fff">Watch</div>
+        <tr><td class="td-rank">9</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌万达店</td><td class="td-sales">章玮</td><td>5</td><td>27495</td><td></td></tr>
+        <tr><td class="td-rank">10</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌新光汇店</td><td class="td-sales">苏扬</td><td>5</td><td>26995</td><td></td></tr>
+        </tbody></table></div>
+      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#4facfe,#00f2fe);color:#fff">Watch</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
         <tr><td class="td-rank">🥇</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌万达店</td><td class="td-sales">朱子豪</td><td>9</td><td>27041</td><td>1</td></tr>
         <tr><td class="td-rank">🥈</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">施凤艳</td><td>9</td><td>21891</td><td>1</td></tr>
@@ -785,7 +791,10 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
         <tr><td class="td-rank">6</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州新北万达店</td><td class="td-sales">陈志鹏</td><td>7</td><td>21693</td><td></td></tr>
         <tr><td class="td-rank">7</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌新光汇店</td><td class="td-sales">何萍</td><td>7</td><td>17343</td><td></td></tr>
         <tr><td class="td-rank">8</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌新光汇店</td><td class="td-sales">朱志坤2</td><td>7</td><td>16993</td><td></td></tr>
-        </tbody></table></div>      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#43e97b,#38f9d7);color:#fff">iPhone</div>
+        <tr><td class="td-rank">9</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌万达店</td><td class="td-sales">袁洋辉</td><td>7</td><td>15743</td><td></td></tr>
+        <tr><td class="td-rank">10</td><td class="td-team">黑马队</td><td class="td-store">苹果余姚万达店</td><td class="td-sales">苏欣然</td><td>6</td><td>19894</td><td></td></tr>
+        </tbody></table></div>
+      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#43e97b,#38f9d7);color:#fff">iPhone</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
         <tr><td class="td-rank">🥇</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">陈岱宗</td><td>19</td><td>157486</td><td>1</td></tr>
         <tr><td class="td-rank">🥈</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">王舰涛</td><td>18</td><td>154386.01</td><td>1</td></tr>
@@ -795,7 +804,10 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
         <tr><td class="td-rank">6</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">谢海燕2</td><td>17</td><td>137489</td><td></td></tr>
         <tr><td class="td-rank">7</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">杨康2</td><td>17</td><td>137417</td><td></td></tr>
         <tr><td class="td-rank">8</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌万达店</td><td class="td-sales">朱浩田</td><td>17</td><td>135859.02</td><td></td></tr>
-        </tbody></table></div>    </div>
+        <tr><td class="td-rank">9</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">巩欣萍</td><td>16</td><td>134872</td><td></td></tr>
+        <tr><td class="td-rank">10</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">叶思佳</td><td>15</td><td>135490</td><td></td></tr>
+        </tbody></table></div>
+    </div>
     <div class="sub-content" id="p4_bcd">
       <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff">Mac</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
@@ -807,7 +819,10 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
         <tr><td class="td-rank">6</td><td class="td-team">战狼队</td><td class="td-store">苹果上海金桥国际店</td><td class="td-sales">谌洁</td><td>3</td><td>21097</td><td></td></tr>
         <tr><td class="td-rank">7</td><td class="td-team">战狼队</td><td class="td-store">苹果上海三林新达汇店</td><td class="td-sales">何苗</td><td>3</td><td>18897</td><td></td></tr>
         <tr><td class="td-rank">8</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州大厦中央商城店</td><td class="td-sales">王金阳</td><td>2</td><td>25998</td><td></td></tr>
-        </tbody></table></div>      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff">iPad</div>
+        <tr><td class="td-rank">9</td><td class="td-team">战狼队</td><td class="td-store">苹果上海金桥国际店</td><td class="td-sales">马鑫鑫</td><td>2</td><td>25148</td><td></td></tr>
+        <tr><td class="td-rank">10</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果上海维璟广场店</td><td class="td-sales">赵旭东</td><td>2</td><td>22998</td><td></td></tr>
+        </tbody></table></div>
+      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff">iPad</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
         <tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州武进万达店</td><td class="td-sales">朱颖</td><td>7</td><td>10099</td><td>1</td></tr>
         <tr><td class="td-rank">🥈</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山东港凯虹店</td><td class="td-sales">杨倩雯</td><td>6</td><td>31214</td><td>1</td></tr>
@@ -817,7 +832,10 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
         <tr><td class="td-rank">6</td><td class="td-team">战狼队</td><td class="td-store">苹果上海崇明万达店</td><td class="td-sales">黄洁</td><td>4</td><td>20896</td><td></td></tr>
         <tr><td class="td-rank">7</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州武进万达店</td><td class="td-sales">陆晓春</td><td>4</td><td>9298</td><td></td></tr>
         <tr><td class="td-rank">8</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州武进万达店</td><td class="td-sales">王晴</td><td>4</td><td>5349</td><td></td></tr>
-        </tbody></table></div>      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#4facfe,#00f2fe);color:#fff">Watch</div>
+        <tr><td class="td-rank">9</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果长宁龙之梦店</td><td class="td-sales">马翔宇</td><td>3</td><td>24097</td><td></td></tr>
+        <tr><td class="td-rank">10</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州天宁吾悦店</td><td class="td-sales">丁俐</td><td>3</td><td>21997</td><td></td></tr>
+        </tbody></table></div>
+      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#4facfe,#00f2fe);color:#fff">Watch</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
         <tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果镇江吾悦店</td><td class="td-sales">许家明</td><td>8</td><td>24942</td><td>1</td></tr>
         <tr><td class="td-rank">🥈</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">谢若璠</td><td>7</td><td>22093</td><td>1</td></tr>
@@ -827,7 +845,10 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
         <tr><td class="td-rank">6</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州路劲又一城店</td><td class="td-sales">蒋乐其</td><td>6</td><td>14744</td><td></td></tr>
         <tr><td class="td-rank">7</td><td class="td-team">猛龙队</td><td class="td-store">苹果扬州金鹰店</td><td class="td-sales">孔凡涛</td><td>6</td><td>14544</td><td></td></tr>
         <tr><td class="td-rank">8</td><td class="td-team">紫气东来队</td><td class="td-store">苹果上虞万达店</td><td class="td-sales">陈云凯</td><td>5</td><td>16895</td><td></td></tr>
-        </tbody></table></div>      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#43e97b,#38f9d7);color:#fff">iPhone</div>
+        <tr><td class="td-rank">9</td><td class="td-team">猛龙队</td><td class="td-store">苹果镇江吾悦店</td><td class="td-sales">张妍</td><td>5</td><td>13895</td><td></td></tr>
+        <tr><td class="td-rank">10</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州路劲又一城店</td><td class="td-sales">岳锋峰</td><td>5</td><td>13095</td><td></td></tr>
+        </tbody></table></div>
+      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#43e97b,#38f9d7);color:#fff">iPhone</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
         <tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州天宁吾悦店</td><td class="td-sales">董亚楠</td><td>17</td><td>124185</td><td>1</td></tr>
         <tr><td class="td-rank">🥈</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">杨欣悦</td><td>16</td><td>138434.1</td><td>1</td></tr>
@@ -837,11 +858,15 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
         <tr><td class="td-rank">6</td><td class="td-team">战狼队</td><td class="td-store">苹果昆山金鹰店</td><td class="td-sales">席燕</td><td>14</td><td>110086</td><td></td></tr>
         <tr><td class="td-rank">7</td><td class="td-team">黑马队</td><td class="td-store">苹果台州万达店</td><td class="td-sales">林瑜</td><td>14</td><td>107694</td><td></td></tr>
         <tr><td class="td-rank">8</td><td class="td-team">战狼队</td><td class="td-store">苹果上海青浦吾悦店</td><td class="td-sales">尹雯慧</td><td>14</td><td>101286</td><td></td></tr>
-        </tbody></table></div>    </div>
+        <tr><td class="td-rank">9</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山东港凯虹店</td><td class="td-sales">高蕊蕊</td><td>12</td><td>99288</td><td></td></tr>
+        <tr><td class="td-rank">10</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">谢若璠</td><td>12</td><td>94588.05</td><td></td></tr>
+        </tbody></table></div>
+    </div>
     <div class="analysis-card">
       <div class="analysis-title">W2 每周龙虎榜</div>
-      <div class="analysis-text"><p>以上为 W2 单周销售龙虎榜（各产品线 TOP10）。</p><p>橙锋突击队在 Mac 赛道表现突出，紫气东来队在 iPhone 赛道持续领跑。</p></div>
+      <div class="analysis-text"><p>以上为 W2 单周销售龙虎榜（各产品线 TOP10）。</p><p>橙锋突击队在 Mac 赛道表现突出，黑马队在 iPhone 赛道持续强势。</p></div>
     </div>
+  </div></div>
   </div>
 
   <div class="footer">数据来源：工作簿7.xlsx · 佩知Apple授权专营店 · 截至 2026-07-11</div>
