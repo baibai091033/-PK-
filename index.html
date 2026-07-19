@@ -41,31 +41,29 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
 .stat-value { font-size:16px; font-weight:700; color:#667eea; }
 .stat-label { font-size:9px; color:#9ca3af; }
 
-.product-lines { display:flex; flex-direction:column; gap:4px; }
+.product-lines { display:flex; flex-direction:column; gap:4px; margin-bottom:8px; }
 .product-line { display:flex; align-items:center; gap:6px; }
 .pl-name { width:40px; font-size:9px; font-weight:600; color:#6b7280; }
 .pl-bar-wrap { flex:1; height:6px; background:#e5e7eb; border-radius:3px; overflow:hidden; }
 .pl-bar { height:100%; border-radius:3px; transition:width 0.5s; }
 .pl-val { width:40px; font-size:8px; color:#9ca3af; text-align:right; }
 
-.team-detail-section { margin-bottom:8px; }
+.team-analysis-card { background:#f8f9fc; border-radius:8px; padding:8px 12px; margin:0 0 8px 0; border:1px solid #e5e7eb; }
+.team-analysis-text { font-size:9px; color:#4b5563; line-height:1.55; }
+.team-analysis-text p { margin-bottom:2px; }
+
+.team-detail-section { margin-bottom:0; }
 .team-detail-header { background:#f8f9fc; padding:8px 12px; border-radius:8px; font-size:11px; font-weight:600; color:#4b5563; cursor:pointer; border:1px solid #e5e7eb; }
 .store-table-wrap { display:none; overflow-x:auto; }
 .team-detail-section.expanded .store-table-wrap { display:block; }
 .store-table { width:100%; border-collapse:collapse; font-size:9px; margin-top:4px; }
 .store-table th { background:#667eea; color:#fff; padding:4px 3px; font-weight:500; }
 .store-table td { padding:3px; text-align:center; border-bottom:1px solid #f0f0f0; }
-.store-name { font-weight:600; color:#1f2937; }
-.store-full { font-size:8px; color:#6b7280; text-align:left; white-space:nowrap; }
 
 .analysis-card { background:#fff; border-radius:12px; padding:14px; margin:10px 0; border-left:4px solid #667eea; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
 .analysis-title { font-size:13px; font-weight:700; color:#1f2937; margin-bottom:8px; }
 .analysis-text { font-size:10px; color:#4b5563; line-height:1.6; }
 .analysis-text p { margin-bottom:4px; }
-
-.team-analysis-card { background:#f8f9fc; border-radius:8px; padding:8px 12px; margin:-4px 0 0 0; border:1px solid #e5e7eb; }
-.team-analysis-text { font-size:9px; color:#4b5563; line-height:1.55; }
-.team-analysis-text p { margin-bottom:2px; }
 
 .sub-tabs { display:flex; gap:6px; margin-bottom:10px; }
 .sub-tab { padding:6px 16px; border-radius:20px; border:1px solid #e5e7eb; background:#fff; font-size:11px; cursor:pointer; color:#6b7280; }
@@ -92,21 +90,22 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
 <div class="container">
   <div class="header">
     <h1>暑期PK赛战报</h1>
-    <div class="subtitle">佩知Apple授权专营店 · 2026暑期赛季</div>
-    <div class="date">数据截至 2026-07-16 营业结束 · 赛季第19天（共56天）</div>
+    <div class="subtitle">Apple授权专营店 · 2026暑期赛季</div>
+    <div class="date">数据截至 2026-07-18 营业结束 · 赛季第21天（共56天）</div>
   </div>
 
   <div class="progress-section">
-    <div class="progress-label"><span>赛季进度</span><span>19/56天（33.9%）</span></div>
-    <div class="progress-bar-outer"><div class="progress-bar-inner" style="width:33.9%"></div></div>
+    <div class="progress-label"><span>赛季进度</span><span>21/56天（37.5%）</span></div>
+    <div class="progress-bar-outer"><div class="progress-bar-inner" style="width:37.5%"></div></div>
   </div>
+
 
   <div class="stat-cards">
     <div class="stat-card"><div class="sv">6</div><div class="sl">战队</div></div>
     <div class="stat-card"><div class="sv">56</div><div class="sl">门店</div></div>
     <div class="stat-card"><div class="sv">24,427</div><div class="sl">总目标(台)</div></div>
-    <div class="stat-card"><div class="sv">8,216</div><div class="sl">累计达成(台)</div></div>
-    <div class="stat-card"><div class="sv">33.6%</div><div class="sl">累计达成率</div></div>
+    <div class="stat-card"><div class="sv">9,078</div><div class="sl">累计达成(台)</div></div>
+    <div class="stat-card"><div class="sv">37.2%</div><div class="sl">累计达成率</div></div>
   </div>
 
   <div class="tabs">
@@ -118,601 +117,535 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
 
   <!-- P1 战队总览 -->
   <div class="tab-content active" id="p1">
-        <div class="team-card">
-          <div class="team-header">
-            <div>
-              <div class="team-name">战狼队</div>
-              <div class="team-leaders">队长：侯丝雨、杨桐</div>
-            </div>
-            <div class="team-rank" style="font-size:14px">🥇</div>
-          </div>
-          <div class="team-stats">
-            <div class="stat-item"><div class="stat-value">30.2%</div><div class="stat-label">综合达成率</div></div>
-            <div class="stat-item"><div class="stat-value">1.81</div><div class="stat-label">积分</div></div>
-          </div>
-          <div class="product-lines">
-            <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:24.324324324324326%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">72/296</div></div>
-<div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:28.705440900562852%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">153/533</div></div>
-<div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:41.25874125874126%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">236/572</div></div>
-<div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:32.431356943891764%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">815/2513</div></div>
-          </div>
-        </div>
-      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#1 · 积分 1.81 · 达成率 30.2%</b></p>
-<p>需关注：<b>苹果昆山金鹰国际购物中心店</b>（24.5%）</p></div></div>
-      <div class="team-detail-section">
-        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
-          <span>战狼队 · 佩知二区</span>
-          <span style="float:right">门店明细 ▼</span>
-        </div>
-        <div class="store-table-wrap">
-          <table class="store-table">
-            <thead><tr><th>代码</th><th>门店</th><th>达成率</th><th>积分</th><th>Mac</th><th>iPad</th><th>Watch</th><th>iPhone</th><th>小计</th></tr></thead>
-            <tbody>
-<tr><td class="store-name">ASH_tzygtd</td><td class="store-full">苹果上海唐镇阳光天地店</td><td style="color:#22c55e;font-weight:600">38.7%</td><td>3.49</td><td>5/16</td><td>10/29</td><td>16/32</td><td>69/139</td><td>100</td></tr>
-<tr><td class="store-name">ASH_slxdh</td><td class="store-full">苹果上海三林新达汇店</td><td style="color:#22c55e;font-weight:600">41.2%</td><td>2.47</td><td>11/16</td><td>7/29</td><td>6/31</td><td>55/137</td><td>79</td></tr>
-<tr><td class="store-name">AJS_kskc</td><td class="store-full">苹果昆山昆城广场店</td><td style="color:#eab308;font-weight:600">33.7%</td><td>2.36</td><td>4/8</td><td>2/14</td><td>6/15</td><td>17/65</td><td>29</td></tr>
-<tr><td class="store-name">ASH_ct</td><td class="store-full">苹果上海长泰国际商业广场店</td><td style="color:#22c55e;font-weight:600">34.1%</td><td>2.05</td><td>15/44</td><td>22/79</td><td>42/85</td><td>97/371</td><td>176</td></tr>
-<tr><td class="store-name">ASH_jqtm</td><td class="store-full">苹果上海金桥太茂商业广场店</td><td style="color:#ef4444;font-weight:600">29.5%</td><td>1.77</td><td>3/21</td><td>9/38</td><td>23/41</td><td>74/180</td><td>109</td></tr>
-<tr><td class="store-name">ASH_jqgj</td><td class="store-full">苹果上海金桥国际商业广场店</td><td style="color:#eab308;font-weight:600">33.4%</td><td>1.67</td><td>7/21</td><td>12/38</td><td>15/41</td><td>59/180</td><td>93</td></tr>
-<tr><td class="store-name">ASH_cmwd</td><td class="store-full">苹果上海崇明万达广场店</td><td style="color:#ef4444;font-weight:600">27.1%</td><td>1.63</td><td>5/34</td><td>18/62</td><td>27/66</td><td>98/290</td><td>148</td></tr>
-<tr><td class="store-name">ASH_qpwy</td><td class="store-full">苹果上海青浦吾悦广场店</td><td style="color:#ef4444;font-weight:600">25.6%</td><td>1.28</td><td>3/31</td><td>20/55</td><td>18/59</td><td>90/261</td><td>131</td></tr>
-<tr><td class="store-name">AJS_ksjy</td><td class="store-full">苹果昆山金鹰国际购物中心店</td><td style="color:#ef4444;font-weight:600">24.5%</td><td>1.23</td><td>5/44</td><td>20/80</td><td>37/85</td><td>109/376</td><td>171</td></tr>
-<tr><td class="store-name">ASH_jth</td><td class="store-full">苹果上海嘉亭荟生活广场店</td><td style="color:#ef4444;font-weight:600">29.3%</td><td>0.88</td><td>14/61</td><td>33/109</td><td>46/117</td><td>147/514</td><td>240</td></tr>
-</tbody>
-          </table>
-        </div>
-      </div>
-        <div class="team-card">
-          <div class="team-header">
-            <div>
-              <div class="team-name">绿势先锋队</div>
-              <div class="team-leaders">队长：徐峰、赵虎</div>
-            </div>
-            <div class="team-rank" style="font-size:14px">🥈</div>
-          </div>
-          <div class="team-stats">
-            <div class="stat-item"><div class="stat-value">32.2%</div><div class="stat-label">综合达成率</div></div>
-            <div class="stat-item"><div class="stat-value">1.61</div><div class="stat-label">积分</div></div>
-          </div>
-          <div class="product-lines">
-            <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:32.03125%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">82/256</div></div>
-<div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:24.130434782608695%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">111/460</div></div>
-<div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:40.65040650406504%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">200/492</div></div>
-<div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:37.25218994928539%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">808/2169</div></div>
-          </div>
-        </div>
-      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#2 · 积分 1.61 · 达成率 32.2%</b></p>
-<p>需关注：<b>苹果上海世博源店</b>（23.1%）</p></div></div>
-      <div class="team-detail-section">
-        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
-          <span>绿势先锋队 · 佩知三区</span>
-          <span style="float:right">门店明细 ▼</span>
-        </div>
-        <div class="store-table-wrap">
-          <table class="store-table">
-            <thead><tr><th>代码</th><th>门店</th><th>达成率</th><th>积分</th><th>Mac</th><th>iPad</th><th>Watch</th><th>iPhone</th><th>小计</th></tr></thead>
-            <tbody>
-<tr><td class="store-name">AZJ_hzds</td><td class="store-full">苹果杭州大厦中央商城店</td><td style="color:#22c55e;font-weight:600">36.6%</td><td>3.29</td><td>7/17</td><td>7/31</td><td>15/33</td><td>62/147</td><td>91</td></tr>
-<tr><td class="store-name">AZJ_qbhy</td><td class="store-full">苹果杭州七堡花园城店</td><td style="color:#22c55e;font-weight:600">35.9%</td><td>3.24</td><td>7/17</td><td>4/30</td><td>14/32</td><td>82/140</td><td>107</td></tr>
-<tr><td class="store-name">AZJ_bjbl</td><td class="store-full">苹果杭州滨江宝龙城店</td><td style="color:#22c55e;font-weight:600">39.3%</td><td>3.14</td><td>17/45</td><td>31/81</td><td>38/86</td><td>145/380</td><td>231</td></tr>
-<tr><td class="store-name">ASH_cnlzm</td><td class="store-full">苹果上海长宁龙之梦购物中心店</td><td style="color:#22c55e;font-weight:600">34.0%</td><td>2.38</td><td>16/37</td><td>13/67</td><td>29/72</td><td>105/316</td><td>163</td></tr>
-<tr><td class="store-name">AZJ_hzyw</td><td class="store-full">苹果杭州永旺梦乐城店</td><td style="color:#eab308;font-weight:600">32.2%</td><td>1.93</td><td>21/66</td><td>28/119</td><td>57/128</td><td>190/563</td><td>296</td></tr>
-<tr><td class="store-name">AZJ_hzjd</td><td class="store-full">苹果杭州金地广场店</td><td style="color:#ef4444;font-weight:600">28.1%</td><td>1.40</td><td>3/18</td><td>8/32</td><td>14/34</td><td>65/150</td><td>90</td></tr>
-<tr><td class="store-name">ASH_sby</td><td class="store-full">苹果上海世博源店</td><td style="color:#ef4444;font-weight:600">23.1%</td><td>1.16</td><td>6/32</td><td>11/57</td><td>16/61</td><td>99/269</td><td>132</td></tr>
-<tr><td class="store-name">ASH_zjgc</td><td class="store-full">苹果上海紫荆广场店</td><td style="color:#ef4444;font-weight:600">25.4%</td><td>1.01</td><td>5/24</td><td>9/43</td><td>17/46</td><td>60/204</td><td>91</td></tr>
-</tbody>
-          </table>
-        </div>
-      </div>
-        <div class="team-card">
-          <div class="team-header">
-            <div>
-              <div class="team-name">猛龙队</div>
-              <div class="team-leaders">队长：周翔、张芮</div>
-            </div>
-            <div class="team-rank" style="font-size:14px">🥉</div>
-          </div>
-          <div class="team-stats">
-            <div class="stat-item"><div class="stat-value">31.8%</div><div class="stat-label">综合达成率</div></div>
-            <div class="stat-item"><div class="stat-value">1.59</div><div class="stat-label">积分</div></div>
-          </div>
-          <div class="product-lines">
-            <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:23.35958005249344%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">89/381</div></div>
-<div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:28.064992614475624%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">190/677</div></div>
-<div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:51.369863013698634%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">375/730</div></div>
-<div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:33.10430980637102%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">1060/3202</div></div>
-          </div>
-        </div>
-      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#3 · 积分 1.59 · 达成率 31.8%</b></p>
-<p>需关注：<b>苹果常州龙湖龙城天街店</b>（24.2%）</p></div></div>
-      <div class="team-detail-section">
-        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
-          <span>猛龙队 · 佩知四区</span>
-          <span style="float:right">门店明细 ▼</span>
-        </div>
-        <div class="store-table-wrap">
-          <table class="store-table">
-            <thead><tr><th>代码</th><th>门店</th><th>达成率</th><th>积分</th><th>Mac</th><th>iPad</th><th>Watch</th><th>iPhone</th><th>小计</th></tr></thead>
-            <tbody>
-<tr><td class="store-name">AJS_njhy</td><td class="store-full">苹果南京弘阳广场店</td><td style="color:#22c55e;font-weight:600">34.6%</td><td>2.42</td><td>11/34</td><td>15/60</td><td>33/65</td><td>106/284</td><td>165</td></tr>
-<tr><td class="store-name">AJS_wjwd</td><td class="store-full">苹果常州武进万达广场店</td><td style="color:#eab308;font-weight:600">33.5%</td><td>2.34</td><td>5/33</td><td>27/59</td><td>30/63</td><td>91/278</td><td>153</td></tr>
-<tr><td class="store-name">AJS_czwy</td><td class="store-full">苹果常州吾悦广场店</td><td style="color:#eab308;font-weight:600">33.2%</td><td>2.32</td><td>8/32</td><td>13/57</td><td>37/61</td><td>98/268</td><td>156</td></tr>
-<tr><td class="store-name">AJS_ljyyc</td><td class="store-full">苹果常州路劲又一城店</td><td style="color:#eab308;font-weight:600">32.5%</td><td>1.95</td><td>12/39</td><td>14/70</td><td>41/75</td><td>106/330</td><td>173</td></tr>
-<tr><td class="store-name">AJS_xbwd</td><td class="store-full">苹果常州新北万达广场店</td><td style="color:#eab308;font-weight:600">32.4%</td><td>1.94</td><td>20/82</td><td>46/142</td><td>76/157</td><td>203/682</td><td>345</td></tr>
-<tr><td class="store-name">AJS_yzjy</td><td class="store-full">苹果扬州江都金鹰国际购物中心店</td><td style="color:#22c55e;font-weight:600">36.7%</td><td>1.83</td><td>9/37</td><td>23/66</td><td>49/70</td><td>76/309</td><td>157</td></tr>
-<tr><td class="store-name">AJS_tnwy</td><td class="store-full">苹果常州天宁吾悦广场店</td><td style="color:#eab308;font-weight:600">31.9%</td><td>1.60</td><td>10/37</td><td>17/66</td><td>30/71</td><td>130/310</td><td>187</td></tr>
-<tr><td class="store-name">AJS_lctj</td><td class="store-full">苹果常州龙湖龙城天街店</td><td style="color:#ef4444;font-weight:600">24.2%</td><td>1.45</td><td>3/32</td><td>17/57</td><td>21/61</td><td>91/268</td><td>132</td></tr>
-<tr><td class="store-name">AJS_flwy</td><td class="store-full">苹果常州飞龙吾悦广场店</td><td style="color:#ef4444;font-weight:600">29.9%</td><td>1.20</td><td>7/24</td><td>11/44</td><td>17/47</td><td>69/207</td><td>104</td></tr>
-<tr><td class="store-name">AJS_zjwy</td><td class="store-full">苹果镇江吾悦广场店</td><td style="color:#ef4444;font-weight:600">27.0%</td><td>1.08</td><td>4/31</td><td>7/56</td><td>41/60</td><td>90/266</td><td>142</td></tr>
-</tbody>
-          </table>
-        </div>
-      </div>
-        <div class="team-card">
-          <div class="team-header">
-            <div>
-              <div class="team-name">黑马队</div>
-              <div class="team-leaders">队长：巫文强、金国庆</div>
-            </div>
-            <div class="team-rank" style="font-size:14px">4</div>
-          </div>
-          <div class="team-stats">
-            <div class="stat-item"><div class="stat-value">31.2%</div><div class="stat-label">综合达成率</div></div>
-            <div class="stat-item"><div class="stat-value">1.56</div><div class="stat-label">积分</div></div>
-          </div>
-          <div class="product-lines">
-            <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:24.74916387959866%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">74/299</div></div>
-<div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:31.79297597042514%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">172/541</div></div>
-<div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:40.17241379310345%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">233/580</div></div>
-<div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:32.992930086410055%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">840/2546</div></div>
-          </div>
-        </div>
-      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#4 · 积分 1.56 · 达成率 31.2%</b></p>
-<p>需关注：<b>苹果宁波世纪东方银泰百货店</b>（10.4%）</p></div></div>
-      <div class="team-detail-section">
-        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
-          <span>黑马队 · 佩知六区</span>
-          <span style="float:right">门店明细 ▼</span>
-        </div>
-        <div class="store-table-wrap">
-          <table class="store-table">
-            <thead><tr><th>代码</th><th>门店</th><th>达成率</th><th>积分</th><th>Mac</th><th>iPad</th><th>Watch</th><th>iPhone</th><th>小计</th></tr></thead>
-            <tbody>
-<tr><td class="store-name">AZJ_yywd</td><td class="store-full">苹果余姚万达广场店</td><td style="color:#22c55e;font-weight:600">37.7%</td><td>3.77</td><td>17/51</td><td>35/93</td><td>45/99</td><td>164/439</td><td>261</td></tr>
-<tr><td class="store-name">AZJ_dgkh</td><td class="store-full">苹果舟山东港凯虹店</td><td style="color:#22c55e;font-weight:600">39.2%</td><td>3.53</td><td>12/35</td><td>26/65</td><td>34/69</td><td>107/302</td><td>179</td></tr>
-<tr><td class="store-name">AZJ_wkgc</td><td class="store-full">苹果宁波1902万科广场店</td><td style="color:#22c55e;font-weight:600">37.6%</td><td>3.38</td><td>5/20</td><td>16/34</td><td>15/36</td><td>68/160</td><td>104</td></tr>
-<tr><td class="store-name">AZJ_zsbl</td><td class="store-full">苹果舟山宝龙广场店</td><td style="color:#eab308;font-weight:600">31.4%</td><td>2.20</td><td>18/60</td><td>36/109</td><td>33/118</td><td>186/516</td><td>273</td></tr>
-<tr><td class="store-name">AZJ_dhkh</td><td class="store-full">苹果舟山定海凯虹店</td><td style="color:#ef4444;font-weight:600">30.2%</td><td>1.81</td><td>4/22</td><td>5/41</td><td>33/43</td><td>61/190</td><td>103</td></tr>
-<tr><td class="store-name">AZJ_nhxz</td><td class="store-full">苹果宁海西子国际广场店</td><td style="color:#eab308;font-weight:600">32.6%</td><td>1.63</td><td>12/55</td><td>41/100</td><td>48/108</td><td>120/473</td><td>221</td></tr>
-<tr><td class="store-name">AZJ_tzwd</td><td class="store-full">苹果台州经开万达广场店</td><td style="color:#ef4444;font-weight:600">20.7%</td><td>1.03</td><td>3/31</td><td>9/55</td><td>21/60</td><td>93/260</td><td>126</td></tr>
-<tr><td class="store-name">AZJ_al</td><td class="store-full">苹果宁波金沙码头奥莱公园店</td><td style="color:#ef4444;font-weight:600">13.5%</td><td>0.54</td><td>2/10</td><td>0/18</td><td>3/19</td><td>19/85</td><td>24</td></tr>
-<tr><td class="store-name">AZJ_nbyt</td><td class="store-full">苹果宁波世纪东方银泰百货店</td><td style="color:#ef4444;font-weight:600">10.4%</td><td>0.10</td><td>1/15</td><td>4/26</td><td>1/28</td><td>22/121</td><td>28</td></tr>
-</tbody>
-          </table>
-        </div>
-      </div>
-        <div class="team-card">
-          <div class="team-header">
-            <div>
-              <div class="team-name">紫气东来队</div>
-              <div class="team-leaders">队长：胡江虹、吴秀英</div>
-            </div>
-            <div class="team-rank" style="font-size:14px">5</div>
-          </div>
-          <div class="team-stats">
-            <div class="stat-item"><div class="stat-value">30.2%</div><div class="stat-label">综合达成率</div></div>
-            <div class="stat-item"><div class="stat-value">1.21</div><div class="stat-label">积分</div></div>
-          </div>
-          <div class="product-lines">
-            <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:23.480662983425415%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">85/362</div></div>
-<div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:26.881720430107524%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">175/651</div></div>
-<div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:42.83667621776504%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">299/698</div></div>
-<div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:35.50488599348534%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">1090/3070</div></div>
-          </div>
-        </div>
-      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#5 · 积分 1.21 · 达成率 30.2%</b></p>
-<p>需关注：<b>苹果绍兴天地店</b>（21.9%）</p></div></div>
-      <div class="team-detail-section">
-        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
-          <span>紫气东来队 · 佩知五区</span>
-          <span style="float:right">门店明细 ▼</span>
-        </div>
-        <div class="store-table-wrap">
-          <table class="store-table">
-            <thead><tr><th>代码</th><th>门店</th><th>达成率</th><th>积分</th><th>Mac</th><th>iPad</th><th>Watch</th><th>iPhone</th><th>小计</th></tr></thead>
-            <tbody>
-<tr><td class="store-name">AZJ_ywzx</td><td class="store-full">苹果义乌之心城市生活广场店</td><td style="color:#22c55e;font-weight:600">37.3%</td><td>2.61</td><td>23/71</td><td>48/127</td><td>62/137</td><td>224/601</td><td>357</td></tr>
-<tr><td class="store-name">AZJ_sxbbb</td><td class="store-full">苹果绍兴八佰伴购物中心店</td><td style="color:#ef4444;font-weight:600">30.8%</td><td>2.16</td><td>5/15</td><td>4/27</td><td>15/29</td><td>37/127</td><td>61</td></tr>
-<tr><td class="store-name">AZJ_ywxgh</td><td class="store-full">苹果义乌新光汇购物中心店</td><td style="color:#22c55e;font-weight:600">35.4%</td><td>2.12</td><td>18/61</td><td>34/109</td><td>66/117</td><td>152/516</td><td>270</td></tr>
-<tr><td class="store-name">AZJ_zjqyc</td><td class="store-full">苹果诸暨青悦城店</td><td style="color:#eab308;font-weight:600">32.0%</td><td>1.92</td><td>5/18</td><td>12/33</td><td>12/35</td><td>47/155</td><td>76</td></tr>
-<tr><td class="store-name">AZJ_ywwd</td><td class="store-full">苹果义乌万达广场店</td><td style="color:#ef4444;font-weight:600">28.0%</td><td>1.68</td><td>10/64</td><td>29/115</td><td>55/123</td><td>219/541</td><td>313</td></tr>
-<tr><td class="store-name">AZJ_wzlw</td><td class="store-full">苹果温州龙湾万达广场店</td><td style="color:#ef4444;font-weight:600">27.1%</td><td>1.35</td><td>9/46</td><td>21/83</td><td>32/89</td><td>142/390</td><td>204</td></tr>
-<tr><td class="store-name">AZJ_sywd</td><td class="store-full">苹果绍兴上虞万达广场店</td><td style="color:#ef4444;font-weight:600">25.7%</td><td>1.03</td><td>4/23</td><td>9/41</td><td>17/44</td><td>69/194</td><td>99</td></tr>
-<tr><td class="store-name">AZJ_wzoh</td><td class="store-full">苹果温州瓯海银泰百货店</td><td style="color:#ef4444;font-weight:600">23.1%</td><td>0.92</td><td>6/39</td><td>9/71</td><td>27/76</td><td>151/334</td><td>193</td></tr>
-<tr><td class="store-name">AZJ_sxtd</td><td class="store-full">苹果绍兴天地店</td><td style="color:#ef4444;font-weight:600">21.9%</td><td>0.66</td><td>5/25</td><td>9/45</td><td>13/48</td><td>49/212</td><td>76</td></tr>
-</tbody>
-          </table>
-        </div>
-      </div>
-        <div class="team-card">
-          <div class="team-header">
-            <div>
-              <div class="team-name">橙锋突击队</div>
-              <div class="team-leaders">队长：王丽、陈佩珊</div>
-            </div>
-            <div class="team-rank" style="font-size:14px">6</div>
-          </div>
-          <div class="team-stats">
-            <div class="stat-item"><div class="stat-value">27.4%</div><div class="stat-label">综合达成率</div></div>
-            <div class="stat-item"><div class="stat-value">1.10</div><div class="stat-label">积分</div></div>
-          </div>
-          <div class="product-lines">
-            <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:22.56809338521401%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">58/257</div></div>
-<div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:20.474137931034484%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">95/464</div></div>
-<div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:42.943548387096776%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">213/496</div></div>
-<div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:31.668194317140237%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">691/2182</div></div>
-          </div>
-        </div>
-      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#6 · 积分 1.10 · 达成率 27.4%</b></p>
-<p>需关注：<b>苹果嘉兴万达广场店</b>（15.9%）</p></div></div>
-      <div class="team-detail-section">
-        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
-          <span>橙锋突击队 · 佩知一区</span>
-          <span style="float:right">门店明细 ▼</span>
-        </div>
-        <div class="store-table-wrap">
-          <table class="store-table">
-            <thead><tr><th>代码</th><th>门店</th><th>达成率</th><th>积分</th><th>Mac</th><th>iPad</th><th>Watch</th><th>iPhone</th><th>小计</th></tr></thead>
-            <tbody>
-<tr><td class="store-name">AZJ_hfbbb</td><td class="store-full">苹果嘉兴华府八佰伴店</td><td style="color:#eab308;font-weight:600">31.6%</td><td>2.21</td><td>9/29</td><td>11/51</td><td>27/55</td><td>72/244</td><td>119</td></tr>
-<tr><td class="store-name">ASH_hmyf</td><td class="store-full">苹果上海海梦一方店</td><td style="color:#eab308;font-weight:600">32.6%</td><td>1.95</td><td>2/12</td><td>8/22</td><td>10/23</td><td>49/103</td><td>69</td></tr>
-<tr><td class="store-name">ASH_xhwk</td><td class="store-full">苹果上海徐汇万科广场店</td><td style="color:#eab308;font-weight:600">32.3%</td><td>1.61</td><td>7/16</td><td>6/30</td><td>11/32</td><td>38/140</td><td>62</td></tr>
-<tr><td class="store-name">AAH_wxh</td><td class="store-full">苹果合肥蜀山万象汇店</td><td style="color:#ef4444;font-weight:600">26.3%</td><td>1.58</td><td>1/10</td><td>3/18</td><td>13/19</td><td>23/84</td><td>40</td></tr>
-<tr><td class="store-name">AZJ_hzwd</td><td class="store-full">苹果湖州万达广场店</td><td style="color:#ef4444;font-weight:600">28.4%</td><td>1.42</td><td>0/21</td><td>8/37</td><td>29/40</td><td>88/179</td><td>125</td></tr>
-<tr><td class="store-name">ASH_sjyxc</td><td class="store-full">苹果上海松江印象城店</td><td style="color:#eab308;font-weight:600">33.1%</td><td>1.32</td><td>24/52</td><td>23/94</td><td>25/101</td><td>139/448</td><td>211</td></tr>
-<tr><td class="store-name">AAH_lhtjd</td><td class="store-full">苹果合肥高新龙湖天街店</td><td style="color:#ef4444;font-weight:600">25.1%</td><td>1.25</td><td>4/28</td><td>4/51</td><td>37/54</td><td>64/240</td><td>109</td></tr>
-<tr><td class="store-name">ASH_wj</td><td class="store-full">苹果上海维璟印象城店</td><td style="color:#ef4444;font-weight:600">26.9%</td><td>1.08</td><td>4/20</td><td>7/37</td><td>19/39</td><td>52/175</td><td>82</td></tr>
-<tr><td class="store-name">ASH_xzlzm</td><td class="store-full">苹果上海莘庄龙之梦购物中心店</td><td style="color:#ef4444;font-weight:600">25.1%</td><td>0.50</td><td>5/33</td><td>15/59</td><td>24/64</td><td>88/282</td><td>132</td></tr>
-<tr><td class="store-name">AZJ_jxwd</td><td class="store-full">苹果嘉兴万达广场店</td><td style="color:#ef4444;font-weight:600">15.9%</td><td>0.48</td><td>2/36</td><td>10/65</td><td>18/69</td><td>78/287</td><td>108</td></tr>
-</tbody>
-          </table>
-        </div>
-      </div>
-    <div class="analysis-card">
-      <div class="analysis-title">赛季总览</div>
-      <div class="analysis-text"><p><b>赛季总览</b>（6月28日 - 8月22日）</p>
-<p>战狼队以 1.81 积分领跑，橙锋突击队（1.10积分）暂居末位。</p>
-<p>6支战队累计达成 8,216 台，综合达成率 33.6%。</p></div>
-    </div>
-  </div>
 
+    <div class="team-card">
+      <div class="team-header">
+        <div>
+          <div class="team-name">绿势先锋队</div>
+          <div class="team-leaders">队长：徐峰、赵虎</div>
+        </div>
+        <div class="team-rank">🥇</div>
+      </div>
+      <div class="team-stats">
+        <div class="stat-item"><div class="stat-value">7</div><div class="stat-label">8周基础得分</div>
+        <div class="stat-item"><div class="stat-value" style="color:#eab308">36.5%</div><div class="stat-label">综合达成率</div></div>
+        <div class="stat-item"><div class="stat-value" style="color:#f59e0b">2.56</div><div class="stat-label">积分</div></div>
+      </div>
+      <div class="product-lines">
+        <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:39%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">99/256</div></div><div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:26%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">121/460</div></div><div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:45%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">220/492</div></div><div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:41%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">887/2169</div></div>
+      </div>
+      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#1 · 积分 2.56 · 达成率 36.5%</b></p><p>门店标杆：<b>苹果杭州滨江宝龙城店</b>（46.8%）</p><p>需关注：<b>苹果上海世博源店</b>（24.6%）</p></div></div>
+      <div class="team-detail-section">
+        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
+          <span>绿势先锋队 门店明细</span>
+          <span style="float:right">▼</span>
+        </div>
+        <div class="store-table-wrap">
+          <table class="store-table"><thead><tr><th>代码</th><th>门店</th><th>达成率</th><th>积分</th><th>Mac</th><th>iPad</th><th>Watch</th><th>iPhone</th><th>小计</th></tr></thead><tbody>
+<tr><td class="store-name">AZJ_bjbl</td><td class="store-full">苹果杭州滨江宝龙城店</td><td style="color:#22c55e;font-weight:600">46.8%</td><td style="color:#f59e0b">4.21</td><td style="color:#22c55e">22/45</td><td style="color:#22c55e">35/81</td><td style="color:#22c55e">46/86</td><td style="color:#22c55e">153/380</td><td>256</td></tr>
+<tr><td class="store-name">AZJ_hzds</td><td class="store-full">苹果杭州大厦中央商城店</td><td style="color:#22c55e;font-weight:600">41.9%</td><td style="color:#f59e0b">3.77</td><td style="color:#22c55e">9/17</td><td style="color:#ef4444">7/31</td><td style="color:#22c55e">16/33</td><td style="color:#22c55e">68/147</td><td>100</td></tr>
+<tr><td class="store-name">ASH_cnlzm</td><td class="store-full">苹果上海长宁龙之梦购物中心店</td><td style="color:#22c55e;font-weight:600">41.9%</td><td style="color:#f59e0b">3.36</td><td style="color:#22c55e">22/37</td><td style="color:#ef4444">14/67</td><td style="color:#22c55e">32/72</td><td style="color:#22c55e">126/316</td><td>194</td></tr>
+<tr><td class="store-name">AZJ_qbhy</td><td class="store-full">苹果杭州七堡花园城店</td><td style="color:#eab308;font-weight:600">36.2%</td><td style="color:#f59e0b">3.25</td><td style="color:#22c55e">7/17</td><td style="color:#ef4444">4/30</td><td style="color:#22c55e">14/32</td><td style="color:#22c55e">84/140</td><td>109</td></tr>
+<tr><td class="store-name">AZJ_hzyw</td><td class="store-full">苹果杭州永旺梦乐城店</td><td style="color:#eab308;font-weight:600">35.1%</td><td style="color:#f59e0b">2.11</td><td style="color:#eab308">23/66</td><td style="color:#ef4444">30/119</td><td style="color:#22c55e">62/128</td><td style="color:#22c55e">212/563</td><td>327</td></tr>
+<tr><td class="store-name">AZJ_hzjd</td><td class="store-full">苹果杭州金地广场店</td><td style="color:#ef4444;font-weight:600">31.5%</td><td style="color:#f59e0b">1.89</td><td style="color:#ef4444">4/18</td><td style="color:#ef4444">9/32</td><td style="color:#22c55e">14/34</td><td style="color:#22c55e">70/150</td><td>97</td></tr>
+<tr><td class="store-name">ASH_sby</td><td class="store-full">苹果上海世博源店</td><td style="color:#ef4444;font-weight:600">24.6%</td><td style="color:#f59e0b">1.48</td><td style="color:#ef4444">6/32</td><td style="color:#ef4444">11/57</td><td style="color:#ef4444">19/61</td><td style="color:#22c55e">108/269</td><td>144</td></tr>
+<tr><td class="store-name">ASH_zjgc</td><td class="store-full">苹果上海紫荆广场店</td><td style="color:#ef4444;font-weight:600">28.7%</td><td style="color:#f59e0b">1.43</td><td style="color:#ef4444">6/24</td><td style="color:#ef4444">11/43</td><td style="color:#eab308">17/46</td><td style="color:#ef4444">66/204</td><td>100</td></tr>
+</tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-header">
+        <div>
+          <div class="team-name">黑马队</div>
+          <div class="team-leaders">队长：巫文强、金国庆</div>
+        </div>
+        <div class="team-rank">🥈</div>
+      </div>
+      <div class="team-stats">
+        <div class="stat-item"><div class="stat-value">6</div><div class="stat-label">8周基础得分</div>
+        <div class="stat-item"><div class="stat-value" style="color:#eab308">34.6%</div><div class="stat-label">综合达成率</div></div>
+        <div class="stat-item"><div class="stat-value" style="color:#f59e0b">2.08</div><div class="stat-label">积分</div></div>
+      </div>
+      <div class="product-lines">
+        <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:27%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">80/299</div></div><div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:36%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">193/541</div></div><div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:46%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">265/580</div></div><div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:36%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">920/2546</div></div>
+      </div>
+      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#2 · 积分 2.08 · 达成率 34.6%</b></p><p>门店标杆：<b>苹果余姚万达广场店</b>（40.0%）</p><p>需关注：<b>苹果宁波金沙码头奥莱公园店</b>（14.7%）</p></div></div>
+      <div class="team-detail-section">
+        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
+          <span>黑马队 门店明细</span>
+          <span style="float:right">▼</span>
+        </div>
+        <div class="store-table-wrap">
+          <table class="store-table"><thead><tr><th>代码</th><th>门店</th><th>达成率</th><th>积分</th><th>Mac</th><th>iPad</th><th>Watch</th><th>iPhone</th><th>小计</th></tr></thead><tbody>
+<tr><td class="store-name">AZJ_yywd</td><td class="store-full">苹果余姚万达广场店</td><td style="color:#22c55e;font-weight:600">40.0%</td><td style="color:#f59e0b">4.41</td><td style="color:#eab308">18/51</td><td style="color:#22c55e">36/93</td><td style="color:#22c55e">49/99</td><td style="color:#22c55e">181/439</td><td>284</td></tr>
+<tr><td class="store-name">AZJ_wkgc</td><td class="store-full">苹果宁波1902万科广场店</td><td style="color:#22c55e;font-weight:600">42.7%</td><td style="color:#f59e0b">4.27</td><td style="color:#ef4444">6/20</td><td style="color:#22c55e">18/34</td><td style="color:#22c55e">17/36</td><td style="color:#22c55e">73/160</td><td>114</td></tr>
+<tr><td class="store-name">AZJ_dgkh</td><td class="store-full">苹果舟山东港凯虹店</td><td style="color:#22c55e;font-weight:600">42.6%</td><td style="color:#f59e0b">4.26</td><td style="color:#eab308">12/35</td><td style="color:#22c55e">30/65</td><td style="color:#22c55e">38/69</td><td style="color:#22c55e">115/302</td><td>195</td></tr>
+<tr><td class="store-name">AZJ_zsbl</td><td class="store-full">苹果舟山宝龙广场店</td><td style="color:#ef4444;font-weight:600">33.9%</td><td style="color:#f59e0b">2.71</td><td style="color:#ef4444">18/60</td><td style="color:#eab308">40/109</td><td style="color:#ef4444">39/118</td><td style="color:#22c55e">199/516</td><td>296</td></tr>
+<tr><td class="store-name">AZJ_nhxz</td><td class="store-full">苹果宁海西子国际广场店</td><td style="color:#eab308;font-weight:600">35.7%</td><td style="color:#f59e0b">2.50</td><td style="color:#ef4444">12/55</td><td style="color:#22c55e">46/100</td><td style="color:#22c55e">55/108</td><td style="color:#ef4444">130/473</td><td>243</td></tr>
+<tr><td class="store-name">AZJ_dhkh</td><td class="store-full">苹果舟山定海凯虹店</td><td style="color:#eab308;font-weight:600">36.9%</td><td style="color:#f59e0b">2.22</td><td style="color:#ef4444">5/22</td><td style="color:#ef4444">8/41</td><td style="color:#22c55e">38/43</td><td style="color:#eab308">69/190</td><td>120</td></tr>
+<tr><td class="store-name">AZJ_tzwd</td><td class="store-full">苹果台州经开万达广场店</td><td style="color:#ef4444;font-weight:600">24.0%</td><td style="color:#f59e0b">1.20</td><td style="color:#ef4444">4/31</td><td style="color:#ef4444">10/55</td><td style="color:#22c55e">24/60</td><td style="color:#22c55e">104/260</td><td>142</td></tr>
+<tr><td class="store-name">AZJ_al</td><td class="store-full">苹果宁波金沙码头奥莱公园店</td><td style="color:#ef4444;font-weight:600">14.7%</td><td style="color:#f59e0b">0.74</td><td style="color:#ef4444">2/10</td><td style="color:#ef4444">0/18</td><td style="color:#ef4444">4/19</td><td style="color:#ef4444">20/85</td><td>26</td></tr>
+<tr><td class="store-name">AZJ_nbyt</td><td class="store-full">苹果宁波世纪东方银泰百货店</td><td style="color:#ef4444;font-weight:600">17.1%</td><td style="color:#f59e0b">0.34</td><td style="color:#ef4444">3/15</td><td style="color:#ef4444">5/26</td><td style="color:#ef4444">1/28</td><td style="color:#ef4444">29/121</td><td>38</td></tr>
+</tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-header">
+        <div>
+          <div class="team-name">战狼队</div>
+          <div class="team-leaders">队长：侯丝雨、杨桐</div>
+        </div>
+        <div class="team-rank">🥉</div>
+      </div>
+      <div class="team-stats">
+        <div class="stat-item"><div class="stat-value">6</div><div class="stat-label">8周基础得分</div>
+        <div class="stat-item"><div class="stat-value" style="color:#ef4444">32.9%</div><div class="stat-label">综合达成率</div></div>
+        <div class="stat-item"><div class="stat-value" style="color:#f59e0b">1.97</div><div class="stat-label">积分</div></div>
+      </div>
+      <div class="product-lines">
+        <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:27%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">81/296</div></div><div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:31%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">163/533</div></div><div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:44%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">250/572</div></div><div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:36%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">901/2513</div></div>
+      </div>
+      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#3 · 积分 1.97 · 达成率 32.9%</b></p><p>门店标杆：<b>苹果上海唐镇阳光天地店</b>（39.8%）</p><p>需关注：<b>苹果昆山金鹰国际购物中心店</b>（27.9%）</p></div></div>
+      <div class="team-detail-section">
+        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
+          <span>战狼队 门店明细</span>
+          <span style="float:right">▼</span>
+        </div>
+        <div class="store-table-wrap">
+          <table class="store-table"><thead><tr><th>代码</th><th>门店</th><th>达成率</th><th>积分</th><th>Mac</th><th>iPad</th><th>Watch</th><th>iPhone</th><th>小计</th></tr></thead><tbody>
+<tr><td class="store-name">ASH_tzygtd</td><td class="store-full">苹果上海唐镇阳光天地店</td><td style="color:#22c55e;font-weight:600">39.8%</td><td style="color:#f59e0b">3.58</td><td style="color:#ef4444">5/16</td><td style="color:#eab308">10/29</td><td style="color:#22c55e">17/32</td><td style="color:#22c55e">73/139</td><td>105</td></tr>
+<tr><td class="store-name">ASH_slxdh</td><td class="store-full">苹果上海三林新达汇店</td><td style="color:#22c55e;font-weight:600">43.6%</td><td style="color:#f59e0b">3.49</td><td style="color:#22c55e">11/16</td><td style="color:#ef4444">7/29</td><td style="color:#ef4444">8/31</td><td style="color:#22c55e">65/137</td><td>91</td></tr>
+<tr><td class="store-name">ASH_jqgj</td><td class="store-full">苹果上海金桥国际商业广场店</td><td style="color:#22c55e;font-weight:600">40.9%</td><td style="color:#f59e0b">2.86</td><td style="color:#22c55e">11/21</td><td style="color:#ef4444">12/38</td><td style="color:#eab308">15/41</td><td style="color:#22c55e">69/180</td><td>107</td></tr>
+<tr><td class="store-name">ASH_ct</td><td class="store-full">苹果上海长泰国际商业广场店</td><td style="color:#22c55e;font-weight:600">37.7%</td><td style="color:#f59e0b">2.64</td><td style="color:#eab308">16/44</td><td style="color:#ef4444">26/79</td><td style="color:#22c55e">44/85</td><td style="color:#ef4444">117/371</td><td>203</td></tr>
+<tr><td class="store-name">AJS_kskc</td><td class="store-full">苹果昆山昆城广场店</td><td style="color:#eab308;font-weight:600">34.2%</td><td style="color:#f59e0b">2.39</td><td style="color:#22c55e">4/8</td><td style="color:#ef4444">2/14</td><td style="color:#22c55e">6/15</td><td style="color:#ef4444">19/65</td><td>31</td></tr>
+<tr><td class="store-name">ASH_cmwd</td><td class="store-full">苹果上海崇明万达广场店</td><td style="color:#ef4444;font-weight:600">29.4%</td><td style="color:#f59e0b">2.06</td><td style="color:#ef4444">6/34</td><td style="color:#ef4444">18/62</td><td style="color:#22c55e">30/66</td><td style="color:#eab308">104/290</td><td>158</td></tr>
+<tr><td class="store-name">ASH_jqtm</td><td class="store-full">苹果上海金桥太茂商业广场店</td><td style="color:#ef4444;font-weight:600">29.6%</td><td style="color:#f59e0b">1.77</td><td style="color:#ef4444">3/21</td><td style="color:#ef4444">9/38</td><td style="color:#22c55e">23/41</td><td style="color:#22c55e">75/180</td><td>110</td></tr>
+<tr><td class="store-name">ASH_qpwy</td><td class="store-full">苹果上海青浦吾悦广场店</td><td style="color:#ef4444;font-weight:600">28.6%</td><td style="color:#f59e0b">1.72</td><td style="color:#ef4444">4/31</td><td style="color:#22c55e">21/55</td><td style="color:#eab308">21/59</td><td style="color:#eab308">96/261</td><td>142</td></tr>
+<tr><td class="store-name">AJS_ksjy</td><td class="store-full">苹果昆山金鹰国际购物中心店</td><td style="color:#ef4444;font-weight:600">27.9%</td><td style="color:#f59e0b">1.68</td><td style="color:#ef4444">6/44</td><td style="color:#ef4444">24/80</td><td style="color:#22c55e">40/85</td><td style="color:#ef4444">119/376</td><td>189</td></tr>
+<tr><td class="store-name">ASH_jth</td><td class="store-full">苹果上海嘉亭荟生活广场店</td><td style="color:#ef4444;font-weight:600">30.6%</td><td style="color:#f59e0b">1.23</td><td style="color:#ef4444">15/61</td><td style="color:#ef4444">34/109</td><td style="color:#22c55e">46/117</td><td style="color:#ef4444">164/514</td><td>259</td></tr>
+</tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-header">
+        <div>
+          <div class="team-name">猛龙队</div>
+          <div class="team-leaders">队长：周翔、张芮</div>
+        </div>
+        <div class="team-rank">4</div>
+      </div>
+      <div class="team-stats">
+        <div class="stat-item"><div class="stat-value">5</div><div class="stat-label">8周基础得分</div>
+        <div class="stat-item"><div class="stat-value" style="color:#eab308">35.8%</div><div class="stat-label">综合达成率</div></div>
+        <div class="stat-item"><div class="stat-value" style="color:#f59e0b">1.79</div><div class="stat-label">积分</div></div>
+      </div>
+      <div class="product-lines">
+        <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:27%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">101/381</div></div><div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:32%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">214/677</div></div><div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:58%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">421/730</div></div><div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:37%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">1172/3202</div></div>
+      </div>
+      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#4 · 积分 1.79 · 达成率 35.8%</b></p><p>门店标杆：<b>苹果南京弘阳广场店</b>（39.8%）</p><p>需关注：<b>苹果常州龙湖龙城天街店</b>（27.8%）</p></div></div>
+      <div class="team-detail-section">
+        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
+          <span>猛龙队 门店明细</span>
+          <span style="float:right">▼</span>
+        </div>
+        <div class="store-table-wrap">
+          <table class="store-table"><thead><tr><th>代码</th><th>门店</th><th>达成率</th><th>积分</th><th>Mac</th><th>iPad</th><th>Watch</th><th>iPhone</th><th>小计</th></tr></thead><tbody>
+<tr><td class="store-name">AJS_njhy</td><td class="store-full">苹果南京弘阳广场店</td><td style="color:#22c55e;font-weight:600">39.8%</td><td style="color:#f59e0b">3.19</td><td style="color:#22c55e">14/34</td><td style="color:#ef4444">17/60</td><td style="color:#22c55e">35/65</td><td style="color:#22c55e">116/284</td><td>182</td></tr>
+<tr><td class="store-name">AJS_tnwy</td><td class="store-full">苹果常州天宁吾悦广场店</td><td style="color:#eab308;font-weight:600">36.0%</td><td style="color:#f59e0b">2.88</td><td style="color:#ef4444">10/37</td><td style="color:#ef4444">22/66</td><td style="color:#22c55e">34/71</td><td style="color:#22c55e">143/310</td><td>209</td></tr>
+<tr><td class="store-name">AJS_czwy</td><td class="store-full">苹果常州吾悦广场店</td><td style="color:#22c55e;font-weight:600">37.4%</td><td style="color:#f59e0b">2.62</td><td style="color:#ef4444">8/32</td><td style="color:#ef4444">15/57</td><td style="color:#22c55e">44/61</td><td style="color:#22c55e">113/268</td><td>180</td></tr>
+<tr><td class="store-name">AJS_wjwd</td><td class="store-full">苹果常州武进万达广场店</td><td style="color:#eab308;font-weight:600">36.8%</td><td style="color:#f59e0b">2.58</td><td style="color:#ef4444">6/33</td><td style="color:#22c55e">28/59</td><td style="color:#22c55e">34/63</td><td style="color:#eab308">100/278</td><td>168</td></tr>
+<tr><td class="store-name">AJS_ljyyc</td><td class="store-full">苹果常州路劲又一城店</td><td style="color:#eab308;font-weight:600">36.3%</td><td style="color:#f59e0b">2.54</td><td style="color:#eab308">14/39</td><td style="color:#ef4444">16/70</td><td style="color:#22c55e">43/75</td><td style="color:#eab308">118/330</td><td>191</td></tr>
+<tr><td class="store-name">AJS_yzjy</td><td class="store-full">苹果扬州江都金鹰国际购物中心店</td><td style="color:#22c55e;font-weight:600">40.0%</td><td style="color:#f59e0b">2.40</td><td style="color:#ef4444">11/37</td><td style="color:#eab308">24/66</td><td style="color:#22c55e">52/70</td><td style="color:#ef4444">78/309</td><td>165</td></tr>
+<tr><td class="store-name">AJS_xbwd</td><td class="store-full">苹果常州新北万达广场店</td><td style="color:#eab308;font-weight:600">36.8%</td><td style="color:#f59e0b">2.21</td><td style="color:#ef4444">22/82</td><td style="color:#eab308">52/142</td><td style="color:#22c55e">90/157</td><td style="color:#ef4444">225/682</td><td>389</td></tr>
+<tr><td class="store-name">AJS_lctj</td><td class="store-full">苹果常州龙湖龙城天街店</td><td style="color:#ef4444;font-weight:600">27.8%</td><td style="color:#f59e0b">1.67</td><td style="color:#ef4444">4/32</td><td style="color:#ef4444">19/57</td><td style="color:#22c55e">24/61</td><td style="color:#eab308">99/268</td><td>146</td></tr>
+<tr><td class="store-name">AJS_zjwy</td><td class="store-full">苹果镇江吾悦广场店</td><td style="color:#ef4444;font-weight:600">30.6%</td><td style="color:#f59e0b">1.53</td><td style="color:#ef4444">5/31</td><td style="color:#ef4444">7/56</td><td style="color:#22c55e">47/60</td><td style="color:#22c55e">99/266</td><td>158</td></tr>
+<tr><td class="store-name">AJS_flwy</td><td class="store-full">苹果常州飞龙吾悦广场店</td><td style="color:#ef4444;font-weight:600">33.3%</td><td style="color:#f59e0b">1.33</td><td style="color:#ef4444">7/24</td><td style="color:#ef4444">14/44</td><td style="color:#22c55e">18/47</td><td style="color:#22c55e">81/207</td><td>120</td></tr>
+</tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-header">
+        <div>
+          <div class="team-name">橙锋突击队</div>
+          <div class="team-leaders">队长：王丽、陈佩珊</div>
+        </div>
+        <div class="team-rank">5</div>
+      </div>
+      <div class="team-stats">
+        <div class="stat-item"><div class="stat-value">5</div><div class="stat-label">8周基础得分</div>
+        <div class="stat-item"><div class="stat-value" style="color:#ef4444">30.2%</div><div class="stat-label">综合达成率</div></div>
+        <div class="stat-item"><div class="stat-value" style="color:#f59e0b">1.51</div><div class="stat-label">积分</div></div>
+      </div>
+      <div class="product-lines">
+        <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:25%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">64/257</div></div><div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:22%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">101/464</div></div><div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:48%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">239/496</div></div><div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:35%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">767/2182</div></div>
+      </div>
+      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#5 · 积分 1.51 · 达成率 30.2%</b></p><p>门店标杆：<b>苹果上海海梦一方店</b>（34.0%）</p><p>需关注：<b>苹果嘉兴万达广场店</b>（19.5%）</p></div></div>
+      <div class="team-detail-section">
+        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
+          <span>橙锋突击队 门店明细</span>
+          <span style="float:right">▼</span>
+        </div>
+        <div class="store-table-wrap">
+          <table class="store-table"><thead><tr><th>代码</th><th>门店</th><th>达成率</th><th>积分</th><th>Mac</th><th>iPad</th><th>Watch</th><th>iPhone</th><th>小计</th></tr></thead><tbody>
+<tr><td class="store-name">ASH_hmyf</td><td class="store-full">苹果上海海梦一方店</td><td style="color:#ef4444;font-weight:600">34.0%</td><td style="color:#f59e0b">2.72</td><td style="color:#ef4444">2/12</td><td style="color:#eab308">8/22</td><td style="color:#22c55e">11/23</td><td style="color:#22c55e">53/103</td><td>74</td></tr>
+<tr><td class="store-name">AZJ_hfbbb</td><td class="store-full">苹果嘉兴华府八佰伴店</td><td style="color:#ef4444;font-weight:600">33.7%</td><td style="color:#f59e0b">2.70</td><td style="color:#ef4444">9/29</td><td style="color:#ef4444">12/51</td><td style="color:#22c55e">30/55</td><td style="color:#ef4444">80/244</td><td>131</td></tr>
+<tr><td class="store-name">AZJ_hzwd</td><td class="store-full">苹果湖州万达广场店</td><td style="color:#ef4444;font-weight:600">33.7%</td><td style="color:#f59e0b">2.36</td><td style="color:#ef4444">1/21</td><td style="color:#ef4444">9/37</td><td style="color:#22c55e">33/40</td><td style="color:#22c55e">98/179</td><td>141</td></tr>
+<tr><td class="store-name">ASH_xhwk</td><td class="store-full">苹果上海徐汇万科广场店</td><td style="color:#eab308;font-weight:600">36.7%</td><td style="color:#f59e0b">1.84</td><td style="color:#22c55e">8/16</td><td style="color:#ef4444">7/30</td><td style="color:#22c55e">12/32</td><td style="color:#ef4444">44/140</td><td>71</td></tr>
+<tr><td class="store-name">ASH_sjyxc</td><td class="store-full">苹果上海松江印象城店</td><td style="color:#eab308;font-weight:600">35.6%</td><td style="color:#f59e0b">1.78</td><td style="color:#22c55e">25/52</td><td style="color:#ef4444">24/94</td><td style="color:#ef4444">31/101</td><td style="color:#ef4444">149/448</td><td>229</td></tr>
+<tr><td class="store-name">AAH_wxh</td><td class="store-full">苹果合肥蜀山万象汇店</td><td style="color:#ef4444;font-weight:600">25.2%</td><td style="color:#f59e0b">1.51</td><td style="color:#ef4444">1/10</td><td style="color:#ef4444">2/18</td><td style="color:#22c55e">13/19</td><td style="color:#ef4444">26/84</td><td>42</td></tr>
+<tr><td class="store-name">AAH_hf</td><td class="store-full">苹果合肥高新龙湖天街店</td><td style="color:#ef4444;font-weight:600">27.4%</td><td style="color:#f59e0b">1.37</td><td style="color:#ef4444">4/28</td><td style="color:#ef4444">5/51</td><td style="color:#22c55e">40/54</td><td style="color:#ef4444">75/240</td><td>124</td></tr>
+<tr><td class="store-name">ASH_wjyxc</td><td class="store-full">苹果上海维璟印象城店</td><td style="color:#ef4444;font-weight:600">28.4%</td><td style="color:#f59e0b">1.14</td><td style="color:#ef4444">4/20</td><td style="color:#ef4444">7/37</td><td style="color:#22c55e">21/39</td><td style="color:#ef4444">58/175</td><td>90</td></tr>
+<tr><td class="store-name">ASH_xzlzm</td><td class="store-full">苹果上海莘庄龙之梦购物中心店</td><td style="color:#ef4444;font-weight:600">28.2%</td><td style="color:#f59e0b">0.85</td><td style="color:#ef4444">7/33</td><td style="color:#ef4444">15/59</td><td style="color:#22c55e">25/64</td><td style="color:#eab308">101/282</td><td>148</td></tr>
+<tr><td class="store-name">AZJ_jxwd</td><td class="store-full">苹果嘉兴万达广场店</td><td style="color:#ef4444;font-weight:600">19.5%</td><td style="color:#f59e0b">0.78</td><td style="color:#ef4444">3/36</td><td style="color:#ef4444">12/65</td><td style="color:#ef4444">23/69</td><td style="color:#ef4444">83/287</td><td>121</td></tr>
+</tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-header">
+        <div>
+          <div class="team-name">紫气东来队</div>
+          <div class="team-leaders">队长：胡江虹、吴秀英</div>
+        </div>
+        <div class="team-rank">6</div>
+      </div>
+      <div class="team-stats">
+        <div class="stat-item"><div class="stat-value">4</div><div class="stat-label">8周基础得分</div>
+        <div class="stat-item"><div class="stat-value" style="color:#ef4444">33.5%</div><div class="stat-label">综合达成率</div></div>
+        <div class="stat-item"><div class="stat-value" style="color:#f59e0b">1.34</div><div class="stat-label">积分</div></div>
+      </div>
+      <div class="product-lines">
+        <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:25%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">90/362</div></div><div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:30%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">198/651</div></div><div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:49%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">345/698</div></div><div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:39%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">1186/3070</div></div>
+      </div>
+      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#6 · 积分 1.34 · 达成率 33.5%</b></p><p>门店标杆：<b>苹果义乌之心城市生活广场店</b>（40.7%）</p><p>需关注：<b>苹果绍兴天地店</b>（24.4%）</p></div></div>
+      <div class="team-detail-section">
+        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
+          <span>紫气东来队 门店明细</span>
+          <span style="float:right">▼</span>
+        </div>
+        <div class="store-table-wrap">
+          <table class="store-table"><thead><tr><th>代码</th><th>门店</th><th>达成率</th><th>积分</th><th>Mac</th><th>iPad</th><th>Watch</th><th>iPhone</th><th>小计</th></tr></thead><tbody>
+<tr><td class="store-name">AZJ_ywzx</td><td class="store-full">苹果义乌之心城市生活广场店</td><td style="color:#22c55e;font-weight:600">40.7%</td><td style="color:#f59e0b">2.85</td><td style="color:#ef4444">24/71</td><td style="color:#22c55e">52/127</td><td style="color:#22c55e">72/137</td><td style="color:#22c55e">245/601</td><td>393</td></tr>
+<tr><td class="store-name">AZJ_ywxgh</td><td class="store-full">苹果义乌新光汇购物中心店</td><td style="color:#22c55e;font-weight:600">39.5%</td><td style="color:#f59e0b">2.77</td><td style="color:#ef4444">19/61</td><td style="color:#eab308">38/109</td><td style="color:#22c55e">78/117</td><td style="color:#ef4444">166/516</td><td>301</td></tr>
+<tr><td class="store-name">AZJ_sxbbb</td><td class="store-full">苹果绍兴八佰伴购物中心店</td><td style="color:#eab308;font-weight:600">35.6%</td><td style="color:#f59e0b">2.49</td><td style="color:#22c55e">6/15</td><td style="color:#ef4444">4/27</td><td style="color:#22c55e">18/29</td><td style="color:#ef4444">40/127</td><td>68</td></tr>
+<tr><td class="store-name">AZJ_zjqyc</td><td class="store-full">苹果诸暨青悦城店</td><td style="color:#ef4444;font-weight:600">33.3%</td><td style="color:#f59e0b">2.00</td><td style="color:#ef4444">5/18</td><td style="color:#22c55e">13/33</td><td style="color:#eab308">12/35</td><td style="color:#ef4444">51/155</td><td>81</td></tr>
+<tr><td class="store-name">AZJ_ywwd</td><td class="store-full">苹果义乌万达广场店</td><td style="color:#ef4444;font-weight:600">30.8%</td><td style="color:#f59e0b">1.85</td><td style="color:#ef4444">11/64</td><td style="color:#ef4444">32/115</td><td style="color:#22c55e">62/123</td><td style="color:#22c55e">231/541</td><td>336</td></tr>
+<tr><td class="store-name">AZJ_wzoh</td><td class="store-full">苹果温州瓯海银泰百货店</td><td style="color:#ef4444;font-weight:600">27.5%</td><td style="color:#f59e0b">1.65</td><td style="color:#ef4444">6/39</td><td style="color:#ef4444">16/71</td><td style="color:#22c55e">31/76</td><td style="color:#22c55e">161/334</td><td>214</td></tr>
+<tr><td class="store-name">AZJ_wzlw</td><td class="store-full">苹果温州龙湾万达广场店</td><td style="color:#ef4444;font-weight:600">29.7%</td><td style="color:#f59e0b">1.49</td><td style="color:#ef4444">10/46</td><td style="color:#ef4444">22/83</td><td style="color:#22c55e">36/89</td><td style="color:#22c55e">158/390</td><td>226</td></tr>
+<tr><td class="store-name">AZJ_sywd</td><td class="store-full">苹果绍兴上虞万达广场店</td><td style="color:#ef4444;font-weight:600">29.1%</td><td style="color:#f59e0b">1.46</td><td style="color:#ef4444">4/23</td><td style="color:#ef4444">11/41</td><td style="color:#22c55e">20/44</td><td style="color:#22c55e">76/194</td><td>111</td></tr>
+<tr><td class="store-name">AZJ_sxtd</td><td class="store-full">苹果绍兴天地店</td><td style="color:#ef4444;font-weight:600">24.4%</td><td style="color:#f59e0b">0.98</td><td style="color:#ef4444">5/25</td><td style="color:#ef4444">10/45</td><td style="color:#ef4444">16/48</td><td style="color:#ef4444">58/212</td><td>89</td></tr>
+</tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; color:#9CA3AF; font-size:12px; padding:16px 0 8px 0;">综合达成率=Mac×35%+iPad×30%+Watch×20%+iPhone×15%；积分=（8周基础得分+加成分）×综合达成率</div>
+
+  </div>
   <!-- P2 W3周报 -->
   <div class="tab-content" id="p2">
-        <div class="team-card">
-          <div class="team-header">
-            <div>
-              <div class="team-name">猛龙队</div>
-              <div class="team-leaders">队长：周翔、张芮</div>
-            </div>
-            <div class="team-rank" style="font-size:14px">🥇</div>
-          </div>
-          <div class="team-stats">
-            <div class="stat-item"><div class="stat-value">74.2%</div><div class="stat-label">W3综合达成率</div></div>
-            <div class="stat-item"><div class="stat-value">0</div><div class="stat-label">W3得分</div></div>
-          </div>
-          <div class="product-lines">
-            <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:71.73913043478261%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">33/46</div></div>
-<div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:68.18181818181817%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">60/88</div></div>
-<div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:100%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">90/88</div></div>
-<div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:54.761904761904766%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">230/420</div></div>
-          </div>
+
+    <div class="team-card">
+      <div class="team-header">
+        <div>
+          <div class="team-name">绿势先锋队</div>
+          <div class="team-leaders">队长：徐峰、赵虎</div>
         </div>
-      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#1 · 得分 0 · 达成率 74.2%</b></p><p>门店标杆：<b>苹果常州飞龙吾悦广场店</b>（1.0%）</p><p>需关注：<b>苹果常州新北万达广场店</b>（60.1%）</p></div></div>
+        <div class="team-rank">🥇</div>
+      </div>
+      <div class="team-stats">
+        <div class="stat-item"><div class="stat-value">104%</div><div class="stat-label">W3综合达成率</div></div>
+        <div class="stat-item"><div class="stat-value">2</div><div class="stat-label">W3得分</div></div>
+      </div>
+      <div class="product-lines">
+        <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:100%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">42/30</div></div><div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:51%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">31/61</div></div><div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:100%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">78/59</div></div><div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:89%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">252/284</div></div>
+      </div>
+      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#1 · 得分 2 · 达成率 104%</b></p><p>门店标杆：<b>苹果杭州七堡花园城店</b>（79%）</p></div></div>
       <div class="team-detail-section">
         <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
-          <span>全部门店 · W3周达成</span>
-          <span style="float:right">门店明细 ▼</span>
+          <span>绿势先锋队 门店明细</span>
+          <span style="float:right">▼</span>
         </div>
         <div class="store-table-wrap">
-          <table class="store-table">
-            <thead><tr><th>代码</th><th>门店</th><th>达成率</th><th>积分</th><th>Mac</th><th>iPad</th><th>Watch</th><th>iPhone</th><th>小计</th></tr></thead>
-            <tbody>
-<tr><td class="store-name">AJS_kskc</td><td class="store-full">苹果昆山昆城广场店</td><td style="color:#ef4444;font-weight:600">1.2%</td><td>-</td><td>2/1</td><td>0/1</td><td>4/2</td><td>5/9</td><td>11</td></tr>
-<tr><td class="store-name">AZJ_yywd</td><td class="store-full">苹果余姚万达广场店</td><td style="color:#ef4444;font-weight:600">1.0%</td><td>-</td><td>7/6</td><td>12/12</td><td>12/12</td><td>49/57</td><td>80</td></tr>
-<tr><td class="store-name">AJS_flwy</td><td class="store-full">苹果常州飞龙吾悦广场店</td><td style="color:#ef4444;font-weight:600">1.0%</td><td>-</td><td>5/3</td><td>6/6</td><td>2/6</td><td>11/27</td><td>24</td></tr>
-<tr><td class="store-name">ASH_tzygtd</td><td class="store-full">苹果上海唐镇阳光天地店</td><td style="color:#22c55e;font-weight:600">99.2%</td><td>1.00</td><td>2/2</td><td>2/4</td><td>5/4</td><td>29/18</td><td>38</td></tr>
-<tr><td class="store-name">AJS_njhy</td><td class="store-full">苹果南京弘阳广场店</td><td style="color:#22c55e;font-weight:600">91.8%</td><td>-</td><td>4/4</td><td>6/8</td><td>10/8</td><td>23/37</td><td>43</td></tr>
-<tr><td class="store-name">AZJ_dgkh</td><td class="store-full">苹果舟山东港凯虹店</td><td style="color:#22c55e;font-weight:600">91.1%</td><td>-</td><td>5/4</td><td>4/8</td><td>10/8</td><td>19/39</td><td>38</td></tr>
-<tr><td class="store-name">AZJ_sxbbb</td><td class="store-full">苹果绍兴八佰伴购物中心店</td><td style="color:#22c55e;font-weight:600">85.3%</td><td>-</td><td>2/2</td><td>2/4</td><td>6/4</td><td>6/17</td><td>16</td></tr>
-<tr><td class="store-name">AJS_yzjy</td><td class="store-full">苹果扬州江都金鹰国际购物中心店</td><td style="color:#22c55e;font-weight:600">83.6%</td><td>-</td><td>3/4</td><td>10/9</td><td>8/8</td><td>11/41</td><td>32</td></tr>
-<tr><td class="store-name">AZJ_ywzx</td><td class="store-full">苹果义乌之心城市生活广场店</td><td style="color:#22c55e;font-weight:600">81.3%</td><td>-</td><td>7/9</td><td>12/17</td><td>21/17</td><td>43/79</td><td>83</td></tr>
-<tr><td class="store-name">AJS_lctj</td><td class="store-full">苹果常州龙湖龙城天街店</td><td style="color:#22c55e;font-weight:600">81.2%</td><td>-</td><td>2/4</td><td>8/7</td><td>7/7</td><td>22/35</td><td>39</td></tr>
-<tr><td class="store-name">AJS_tnwy</td><td class="store-full">苹果常州天宁吾悦广场店</td><td style="color:#22c55e;font-weight:600">80.0%</td><td>-</td><td>4/4</td><td>4/9</td><td>8/9</td><td>38/41</td><td>54</td></tr>
-<tr><td class="store-name">ASH_xhwk</td><td class="store-full">苹果上海徐汇万科广场店</td><td style="color:#22c55e;font-weight:600">79.2%</td><td>-</td><td>2/2</td><td>2/4</td><td>4/4</td><td>11/18</td><td>19</td></tr>
-<tr><td class="store-name">AZJ_hzds</td><td class="store-full">苹果杭州大厦中央商城店</td><td style="color:#22c55e;font-weight:600">78.7%</td><td>-</td><td>2/2</td><td>2/4</td><td>4/4</td><td>11/19</td><td>19</td></tr>
-<tr><td class="store-name">AZJ_hzjd</td><td class="store-full">苹果杭州金地广场店</td><td style="color:#22c55e;font-weight:600">78.5%</td><td>-</td><td>2/2</td><td>3/4</td><td>3/4</td><td>8/20</td><td>16</td></tr>
-<tr><td class="store-name">ASH_zjgc</td><td class="store-full">苹果上海紫荆广场店</td><td style="color:#22c55e;font-weight:600">78.3%</td><td>-</td><td>2/3</td><td>3/6</td><td>9/6</td><td>18/27</td><td>32</td></tr>
-<tr><td class="store-name">AZJ_wkgc</td><td class="store-full">苹果宁波1902万科广场店</td><td style="color:#22c55e;font-weight:600">78.2%</td><td>-</td><td>1/2</td><td>4/4</td><td>4/4</td><td>15/21</td><td>24</td></tr>
-<tr><td class="store-name">AZJ_qbhy</td><td class="store-full">苹果杭州七堡花园城店</td><td style="color:#22c55e;font-weight:600">77.5%</td><td>1.00</td><td>2/2</td><td>1/4</td><td>4/4</td><td>18/18</td><td>25</td></tr>
-<tr><td class="store-name">AJS_czwy</td><td class="store-full">苹果常州吾悦广场店</td><td style="color:#22c55e;font-weight:600">76.1%</td><td>-</td><td>4/4</td><td>2/7</td><td>9/7</td><td>16/35</td><td>31</td></tr>
-<tr><td class="store-name">ASH_jth</td><td class="store-full">苹果上海嘉亭荟生活广场店</td><td style="color:#22c55e;font-weight:600">76.0%</td><td>-</td><td>6/7</td><td>10/14</td><td>12/14</td><td>33/67</td><td>61</td></tr>
-<tr><td class="store-name">AJS_wjwd</td><td class="store-full">苹果常州武进万达广场店</td><td style="color:#22c55e;font-weight:600">75.2%</td><td>-</td><td>1/4</td><td>9/7</td><td>8/8</td><td>19/36</td><td>37</td></tr>
-<tr><td class="store-name">ASH_ct</td><td class="store-full">苹果上海长泰国际商业广场店</td><td style="color:#22c55e;font-weight:600">75.1%</td><td>-</td><td>5/6</td><td>4/10</td><td>13/10</td><td>26/49</td><td>48</td></tr>
-<tr><td class="store-name">ASH_sjyxc</td><td class="store-full">苹果上海松江印象城店</td><td style="color:#22c55e;font-weight:600">74.0%</td><td>-</td><td>7/6</td><td>4/12</td><td>8/12</td><td>38/58</td><td>57</td></tr>
-<tr><td class="store-name">AZJ_hzyw</td><td class="store-full">苹果杭州永旺梦乐城店</td><td style="color:#22c55e;font-weight:600">73.9%</td><td>-</td><td>8/8</td><td>4/16</td><td>17/15</td><td>43/74</td><td>72</td></tr>
-<tr><td class="store-name">AZJ_hfbbb</td><td class="store-full">苹果嘉兴华府八佰伴店</td><td style="color:#22c55e;font-weight:600">72.0%</td><td>-</td><td>4/4</td><td>3/7</td><td>6/7</td><td>15/32</td><td>28</td></tr>
-<tr><td class="store-name">AZJ_ywxgh</td><td class="store-full">苹果义乌新光汇购物中心店</td><td style="color:#22c55e;font-weight:600">70.6%</td><td>-</td><td>6/7</td><td>4/14</td><td>19/14</td><td>22/68</td><td>51</td></tr>
-<tr><td class="store-name">AAH_lhtjd</td><td class="store-full">苹果合肥高新龙湖天街店</td><td style="color:#22c55e;font-weight:600">70.3%</td><td>-</td><td>3/3</td><td>1/7</td><td>9/7</td><td>11/31</td><td>24</td></tr>
-<tr><td class="store-name">AZJ_wzlw</td><td class="store-full">苹果温州龙湾万达广场店</td><td style="color:#22c55e;font-weight:600">68.4%</td><td>-</td><td>3/6</td><td>8/11</td><td>11/11</td><td>31/51</td><td>53</td></tr>
-<tr><td class="store-name">ASH_qpwy</td><td class="store-full">苹果上海青浦吾悦广场店</td><td style="color:#22c55e;font-weight:600">68.1%</td><td>-</td><td>0/4</td><td>7/7</td><td>9/7</td><td>28/34</td><td>44</td></tr>
-<tr><td class="store-name">AZJ_hzwd</td><td class="store-full">苹果湖州万达广场店</td><td style="color:#22c55e;font-weight:600">67.7%</td><td>-</td><td>0/3</td><td>4/5</td><td>8/5</td><td>18/23</td><td>30</td></tr>
-<tr><td class="store-name">ASH_cnlzm</td><td class="store-full">苹果上海长宁龙之梦购物中心店</td><td style="color:#22c55e;font-weight:600">66.7%</td><td>-</td><td>5/4</td><td>1/9</td><td>7/9</td><td>11/41</td><td>24</td></tr>
-<tr><td class="store-name">ASH_slxdh</td><td class="store-full">苹果上海三林新达汇店</td><td style="color:#22c55e;font-weight:600">65.8%</td><td>-</td><td>2/2</td><td>1/4</td><td>3/4</td><td>10/18</td><td>16</td></tr>
-<tr><td class="store-name">AZJ_zsbl</td><td class="store-full">苹果舟山宝龙广场店</td><td style="color:#22c55e;font-weight:600">65.1%</td><td>-</td><td>7/7</td><td>5/14</td><td>10/14</td><td>23/67</td><td>45</td></tr>
-<tr><td class="store-name">AZJ_tzwd</td><td class="store-full">苹果台州经开万达广场店</td><td style="color:#22c55e;font-weight:600">64.3%</td><td>-</td><td>2/4</td><td>4/7</td><td>7/7</td><td>22/34</td><td>35</td></tr>
-<tr><td class="store-name">AJS_ljyyc</td><td class="store-full">苹果常州路劲又一城店</td><td style="color:#22c55e;font-weight:600">63.4%</td><td>-</td><td>4/5</td><td>2/9</td><td>9/9</td><td>25/43</td><td>40</td></tr>
-<tr><td class="store-name">AZJ_zjqyc</td><td class="store-full">苹果诸暨青悦城店</td><td style="color:#22c55e;font-weight:600">62.5%</td><td>-</td><td>0/2</td><td>4/4</td><td>5/4</td><td>10/20</td><td>19</td></tr>
-<tr><td class="store-name">AJS_zjwy</td><td class="store-full">苹果镇江吾悦广场店</td><td style="color:#22c55e;font-weight:600">60.3%</td><td>-</td><td>1/4</td><td>4/7</td><td>8/7</td><td>27/35</td><td>40</td></tr>
-<tr><td class="store-name">AJS_xbwd</td><td class="store-full">苹果常州新北万达广场店</td><td style="color:#22c55e;font-weight:600">60.1%</td><td>-</td><td>5/10</td><td>9/19</td><td>21/19</td><td>38/90</td><td>73</td></tr>
-<tr><td class="store-name">AZJ_dhkh</td><td class="store-full">苹果舟山定海凯虹店</td><td style="color:#22c55e;font-weight:600">59.4%</td><td>-</td><td>0/3</td><td>1/5</td><td>12/5</td><td>9/25</td><td>22</td></tr>
-<tr><td class="store-name">AZJ_nhxz</td><td class="store-full">苹果宁海西子国际广场店</td><td style="color:#22c55e;font-weight:600">58.0%</td><td>-</td><td>4/7</td><td>8/13</td><td>8/13</td><td>30/62</td><td>50</td></tr>
-<tr><td class="store-name">AZJ_bjbl</td><td class="store-full">苹果杭州滨江宝龙城店</td><td style="color:#22c55e;font-weight:600">58.0%</td><td>-</td><td>2/5</td><td>4/11</td><td>11/10</td><td>37/50</td><td>54</td></tr>
-<tr><td class="store-name">AJS_ksjy</td><td class="store-full">苹果昆山金鹰国际购物中心店</td><td style="color:#22c55e;font-weight:600">56.1%</td><td>-</td><td>0/6</td><td>8/10</td><td>13/10</td><td>20/49</td><td>41</td></tr>
-<tr><td class="store-name">ASH_hmyf</td><td class="store-full">苹果上海海梦一方店</td><td style="color:#22c55e;font-weight:600">56.0%</td><td>-</td><td>0/1</td><td>3/3</td><td>2/3</td><td>11/13</td><td>16</td></tr>
-<tr><td class="store-name">AZJ_wzoh</td><td class="store-full">苹果温州瓯海银泰百货店</td><td style="color:#22c55e;font-weight:600">55.2%</td><td>-</td><td>2/5</td><td>2/9</td><td>10/9</td><td>36/44</td><td>50</td></tr>
-<tr><td class="store-name">AZJ_ywwd</td><td class="store-full">苹果义乌万达广场店</td><td style="color:#22c55e;font-weight:600">54.7%</td><td>-</td><td>2/8</td><td>8/15</td><td>15/15</td><td>47/71</td><td>72</td></tr>
-<tr><td class="store-name">AZJ_sywd</td><td class="store-full">苹果绍兴上虞万达广场店</td><td style="color:#22c55e;font-weight:600">52.3%</td><td>-</td><td>2/3</td><td>2/5</td><td>2/5</td><td>15/25</td><td>21</td></tr>
-<tr><td class="store-name">ASH_xzlzm</td><td class="store-full">苹果上海莘庄龙之梦购物中心店</td><td style="color:#22c55e;font-weight:600">52.3%</td><td>-</td><td>2/4</td><td>4/8</td><td>5/8</td><td>18/37</td><td>29</td></tr>
-<tr><td class="store-name">ASH_sby</td><td class="store-full">苹果上海世博源店</td><td style="color:#22c55e;font-weight:600">50.5%</td><td>-</td><td>2/4</td><td>3/7</td><td>3/7</td><td>27/35</td><td>35</td></tr>
-<tr><td class="store-name">AZJ_al</td><td class="store-full">苹果宁波金沙码头奥莱公园店</td><td style="color:#22c55e;font-weight:600">50.5%</td><td>-</td><td>1/1</td><td>0/3</td><td>1/2</td><td>4/11</td><td>6</td></tr>
-<tr><td class="store-name">ASH_wj</td><td class="store-full">苹果上海维璟印象城店</td><td style="color:#22c55e;font-weight:600">47.1%</td><td>-</td><td>0/2</td><td>3/5</td><td>5/5</td><td>14/23</td><td>22</td></tr>
-<tr><td class="store-name">ASH_jqgj</td><td class="store-full">苹果上海金桥国际商业广场店</td><td style="color:#22c55e;font-weight:600">44.1%</td><td>-</td><td>2/3</td><td>2/5</td><td>0/5</td><td>14/24</td><td>18</td></tr>
-<tr><td class="store-name">ASH_cmwd</td><td class="store-full">苹果上海崇明万达广场店</td><td style="color:#22c55e;font-weight:600">40.8%</td><td>-</td><td>0/4</td><td>4/8</td><td>7/8</td><td>21/38</td><td>32</td></tr>
-<tr><td class="store-name">AAH_wxh</td><td class="store-full">苹果合肥蜀山万象汇店</td><td style="color:#22c55e;font-weight:600">36.8%</td><td>-</td><td>0/1</td><td>1/3</td><td>2/2</td><td>5/11</td><td>8</td></tr>
-<tr><td class="store-name">ASH_jqtm</td><td class="store-full">苹果上海金桥太茂商业广场店</td><td style="color:#22c55e;font-weight:600">36.1%</td><td>-</td><td>0/3</td><td>0/5</td><td>7/5</td><td>13/24</td><td>20</td></tr>
-<tr><td class="store-name">AZJ_sxtd</td><td class="store-full">苹果绍兴天地店</td><td style="color:#ef4444;font-weight:600">28.2%</td><td>-</td><td>0/3</td><td>3/6</td><td>3/6</td><td>6/28</td><td>12</td></tr>
-<tr><td class="store-name">AZJ_jxwd</td><td class="store-full">苹果嘉兴万达广场店</td><td style="color:#ef4444;font-weight:600">26.1%</td><td>-</td><td>0/4</td><td>1/9</td><td>7/8</td><td>14/40</td><td>22</td></tr>
-<tr><td class="store-name">AZJ_nbyt</td><td class="store-full">苹果宁波世纪东方银泰百货店</td><td style="color:#ef4444;font-weight:600">17.2%</td><td>-</td><td>0/2</td><td>1/4</td><td>1/4</td><td>6/19</td><td>8</td></tr>
-</tbody>
-          </table>
+          <table class="store-table"><thead><tr><th>门店</th><th>达成/目标</th><th>达成率</th><th>得分</th></tr></thead><tbody>
+            <tr><td class="store-name">苹果杭州七堡花园城店</td><td>27/28</td><td style="color:#ef4444">79%</td><td>3</td></tr><tr><td class="store-name">苹果上海长宁龙之梦购物中心店</td><td>55/63</td><td style="color:#22c55e">137%</td><td>2</td></tr><tr><td class="store-name">苹果杭州大厦中央商城店</td><td>28/29</td><td style="color:#22c55e">123%</td><td>2</td></tr><tr><td class="store-name">苹果杭州滨江宝龙城店</td><td>79/76</td><td style="color:#22c55e">122%</td><td>2</td></tr><tr><td class="store-name">苹果杭州金地广场店</td><td>23/30</td><td style="color:#22c55e">107%</td><td>2</td></tr><tr><td class="store-name">苹果上海紫荆广场店</td><td>41/42</td><td style="color:#22c55e">103%</td><td>2</td></tr><tr><td class="store-name">苹果杭州永旺梦乐城店</td><td>103/113</td><td style="color:#22c55e">98%</td><td>2</td></tr><tr><td class="store-name">苹果上海世博源店</td><td>47/53</td><td style="color:#ef4444">63%</td><td>1</td></tr>
+          </tbody></table>
         </div>
       </div>
-    <div class="analysis-card">
-      <div class="analysis-title">W3 周报分析</div>
-      <div class="analysis-text"><p><b>W3 周报概览</b></p>
-<p>大盘总计达成率 <b>62.2%</b>，6支战队中 0支超过大盘线。</p>
-<p>猛龙队以 74.2% 领跑 W3，橙锋突击队（59.9%）本周表现偏弱。</p></div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-header">
+        <div>
+          <div class="team-name">猛龙队</div>
+          <div class="team-leaders">队长：周翔、张芮</div>
+        </div>
+        <div class="team-rank">🥈</div>
+      </div>
+      <div class="team-stats">
+        <div class="stat-item"><div class="stat-value">106%</div><div class="stat-label">W3综合达成率</div></div>
+        <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">W3得分</div></div>
+      </div>
+      <div class="product-lines">
+        <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:98%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">45/46</div></div><div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:95%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">84/88</div></div><div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:100%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">136/88</div></div><div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:81%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">342/420</div></div>
+      </div>
+      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#2 · 得分 1 · 达成率 106%</b></p><p>门店标杆：<b>苹果常州天宁吾悦广场店</b>（110%）</p></div></div>
+      <div class="team-detail-section">
+        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
+          <span>猛龙队 门店明细</span>
+          <span style="float:right">▼</span>
+        </div>
+        <div class="store-table-wrap">
+          <table class="store-table"><thead><tr><th>门店</th><th>达成/目标</th><th>达成率</th><th>得分</th></tr></thead><tbody>
+            <tr><td class="store-name">苹果常州天宁吾悦广场店</td><td>76/63</td><td style="color:#22c55e">110%</td><td>4</td></tr><tr><td class="store-name">苹果南京弘阳广场店</td><td>60/57</td><td style="color:#22c55e">135%</td><td>3</td></tr><tr><td class="store-name">苹果扬州江都金鹰国际购物中心店</td><td>40/62</td><td style="color:#22c55e">113%</td><td>3</td></tr><tr><td class="store-name">苹果常州飞龙吾悦广场店</td><td>40/42</td><td style="color:#22c55e">126%</td><td>2</td></tr><tr><td class="store-name">苹果常州吾悦广场店</td><td>55/53</td><td style="color:#22c55e">111%</td><td>2</td></tr><tr><td class="store-name">苹果常州龙湖龙城天街店</td><td>53/53</td><td style="color:#22c55e">111%</td><td>2</td></tr><tr><td class="store-name">苹果常州武进万达广场店</td><td>52/55</td><td style="color:#22c55e">102%</td><td>2</td></tr><tr><td class="store-name">苹果常州路劲又一城店</td><td>58/66</td><td style="color:#eab308">93%</td><td>2</td></tr><tr><td class="store-name">苹果镇江吾悦广场店</td><td>56/53</td><td style="color:#eab308">90%</td><td>2</td></tr><tr><td class="store-name">苹果常州新北万达广场店</td><td>117/138</td><td style="color:#22c55e">95%</td><td>1</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-header">
+        <div>
+          <div class="team-name">黑马队</div>
+          <div class="team-leaders">队长：巫文强、金国庆</div>
+        </div>
+        <div class="team-rank">🥉</div>
+      </div>
+      <div class="team-stats">
+        <div class="stat-item"><div class="stat-value">97%</div><div class="stat-label">W3综合达成率</div></div>
+        <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">W3得分</div></div>
+      </div>
+      <div class="product-lines">
+        <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:92%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">33/36</div></div><div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:86%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">60/70</div></div><div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:100%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">97/69</div></div><div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:77%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">257/335</div></div>
+      </div>
+      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#3 · 得分 1 · 达成率 97%</b></p><p>门店标杆：<b>苹果余姚万达广场店</b>（123%）</p></div></div>
+      <div class="team-detail-section">
+        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
+          <span>黑马队 门店明细</span>
+          <span style="float:right">▼</span>
+        </div>
+        <div class="store-table-wrap">
+          <table class="store-table"><thead><tr><th>门店</th><th>达成/目标</th><th>达成率</th><th>得分</th></tr></thead><tbody>
+            <tr><td class="store-name">苹果余姚万达广场店</td><td>103/87</td><td style="color:#22c55e">123%</td><td>4</td></tr><tr><td class="store-name">苹果宁波1902万科广场店</td><td>34/31</td><td style="color:#22c55e">124%</td><td>3</td></tr><tr><td class="store-name">苹果舟山东港凯虹店</td><td>54/59</td><td style="color:#22c55e">119%</td><td>3</td></tr><tr><td class="store-name">苹果舟山宝龙广场店</td><td>68/102</td><td style="color:#ef4444">85%</td><td>2</td></tr><tr><td class="store-name">苹果宁海西子国际广场店</td><td>72/95</td><td style="color:#ef4444">83%</td><td>2</td></tr><tr><td class="store-name">苹果宁波金沙码头奥莱公园店</td><td>8/17</td><td style="color:#ef4444">62%</td><td>2</td></tr><tr><td class="store-name">苹果舟山定海凯虹店</td><td>39/38</td><td style="color:#22c55e">114%</td><td>1</td></tr><tr><td class="store-name">苹果台州经开万达广场店</td><td>51/52</td><td style="color:#eab308">91%</td><td>1</td></tr><tr><td class="store-name">苹果宁波世纪东方银泰百货店</td><td>18/29</td><td style="color:#ef4444">65%</td><td>1</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-header">
+        <div>
+          <div class="team-name">紫气东来队</div>
+          <div class="team-leaders">队长：胡江虹、吴秀英</div>
+        </div>
+        <div class="team-rank">4</div>
+      </div>
+      <div class="team-stats">
+        <div class="stat-item"><div class="stat-value">91%</div><div class="stat-label">W3综合达成率</div></div>
+        <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">W3得分</div></div>
+      </div>
+      <div class="product-lines">
+        <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:64%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">29/45</div></div><div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:80%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">68/85</div></div><div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:100%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">138/85</div></div><div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:77%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">312/403</div></div>
+      </div>
+      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#4 · 得分 1 · 达成率 91%</b></p><p>门店标杆：<b>苹果温州瓯海银泰百货店</b>（90%）</p></div></div>
+      <div class="team-detail-section">
+        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
+          <span>紫气东来队 门店明细</span>
+          <span style="float:right">▼</span>
+        </div>
+        <div class="store-table-wrap">
+          <table class="store-table"><thead><tr><th>门店</th><th>达成/目标</th><th>达成率</th><th>得分</th></tr></thead><tbody>
+            <tr><td class="store-name">苹果温州瓯海银泰百货店</td><td>71/67</td><td style="color:#eab308">91%</td><td>3</td></tr><tr><td class="store-name">苹果绍兴八佰伴购物中心店</td><td>23/27</td><td style="color:#22c55e">120%</td><td>2</td></tr><tr><td class="store-name">苹果义乌新光汇购物中心店</td><td>82/103</td><td style="color:#22c55e">104%</td><td>2</td></tr><tr><td class="store-name">苹果诸暨青悦城店</td><td>24/30</td><td style="color:#ef4444">73%</td><td>2</td></tr><tr><td class="store-name">苹果义乌之心城市生活广场店</td><td>119/122</td><td style="color:#22c55e">108%</td><td>1</td></tr><tr><td class="store-name">苹果温州龙湾万达广场店</td><td>75/79</td><td style="color:#ef4444">89%</td><td>1</td></tr><tr><td class="store-name">苹果绍兴上虞万达广场店</td><td>33/38</td><td style="color:#ef4444">81%</td><td>1</td></tr><tr><td class="store-name">苹果义乌万达广场店</td><td>95/109</td><td style="color:#ef4444">77%</td><td>1</td></tr><tr><td class="store-name">苹果绍兴天地店</td><td>25/43</td><td style="color:#ef4444">48%</td><td>1</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-header">
+        <div>
+          <div class="team-name">战狼队</div>
+          <div class="team-leaders">队长：侯丝雨、杨桐</div>
+        </div>
+        <div class="team-rank">5</div>
+      </div>
+      <div class="team-stats">
+        <div class="stat-item"><div class="stat-value">85%</div><div class="stat-label">W3综合达成率</div></div>
+        <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">W3得分</div></div>
+      </div>
+      <div class="product-lines">
+        <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:74%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">28/38</div></div><div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:71%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">48/68</div></div><div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:100%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">87/69</div></div><div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:86%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">285/330</div></div>
+      </div>
+      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#5 · 得分 1 · 达成率 85%</b></p><p>门店标杆：<b>苹果上海唐镇阳光天地店</b>（107%）</p></div></div>
+      <div class="team-detail-section">
+        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
+          <span>战狼队 门店明细</span>
+          <span style="float:right">▼</span>
+        </div>
+        <div class="store-table-wrap">
+          <table class="store-table"><thead><tr><th>门店</th><th>达成/目标</th><th>达成率</th><th>得分</th></tr></thead><tbody>
+            <tr><td class="store-name">苹果上海唐镇阳光天地店</td><td>43/28</td><td style="color:#22c55e">108%</td><td>3</td></tr><tr><td class="store-name">苹果上海青浦吾悦广场店</td><td>55/52</td><td style="color:#eab308">92%</td><td>3</td></tr><tr><td class="store-name">苹果上海三林新达汇店</td><td>28/28</td><td style="color:#ef4444">84%</td><td>3</td></tr><tr><td class="store-name">苹果昆山昆城广场店</td><td>13/13</td><td style="color:#22c55e">122%</td><td>2</td></tr><tr><td class="store-name">苹果上海长泰国际商业广场店</td><td>75/75</td><td style="color:#22c55e">103%</td><td>2</td></tr><tr><td class="store-name">苹果上海金桥国际商业广场店</td><td>32/37</td><td style="color:#22c55e">97%</td><td>2</td></tr><tr><td class="store-name">苹果昆山金鹰国际购物中心店</td><td>59/75</td><td style="color:#ef4444">83%</td><td>2</td></tr><tr><td class="store-name">苹果上海嘉亭荟生活广场店</td><td>80/102</td><td style="color:#ef4444">87%</td><td>1</td></tr><tr><td class="store-name">苹果上海崇明万达广场店</td><td>42/58</td><td style="color:#ef4444">59%</td><td>1</td></tr><tr><td class="store-name">苹果上海金桥太茂商业广场店</td><td>21/37</td><td style="color:#ef4444">37%</td><td>1</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-header">
+        <div>
+          <div class="team-name">橙锋突击队</div>
+          <div class="team-leaders">队长：王丽、陈佩珊</div>
+        </div>
+        <div class="team-rank">6</div>
+      </div>
+      <div class="team-stats">
+        <div class="stat-item"><div class="stat-value">82%</div><div class="stat-label">W3综合达成率</div></div>
+        <div class="stat-item"><div class="stat-value">1</div><div class="stat-label">W3得分</div></div>
+      </div>
+      <div class="product-lines">
+        <div class="product-line"><div class="pl-name">Mac</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:80%;background:linear-gradient(90deg,#667eea,#764ba2)"></div></div><div class="pl-val">24/30</div></div><div class="product-line"><div class="pl-name">iPad</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:51%;background:linear-gradient(90deg,#f093fb,#f5576c)"></div></div><div class="pl-val">32/63</div></div><div class="product-line"><div class="pl-name">Watch</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:100%;background:linear-gradient(90deg,#4facfe,#00f2fe)"></div></div><div class="pl-val">82/61</div></div><div class="product-line"><div class="pl-name">iPhone</div><div class="pl-bar-wrap"><div class="pl-bar" style="width:81%;background:linear-gradient(90deg,#43e97b,#38f9d7)"></div></div><div class="pl-val">231/286</div></div>
+      </div>
+      <div class="team-analysis-card"><div class="team-analysis-text"><p><b>#6 · 得分 1 · 达成率 82%</b></p><p>门店标杆：<b>苹果湖州万达广场店</b>（107%）</p></div></div>
+      <div class="team-detail-section">
+        <div class="team-detail-header" onclick="this.parentElement.classList.toggle('expanded')">
+          <span>橙锋突击队 门店明细</span>
+          <span style="float:right">▼</span>
+        </div>
+        <div class="store-table-wrap">
+          <table class="store-table"><thead><tr><th>门店</th><th>达成/目标</th><th>达成率</th><th>得分</th></tr></thead><tbody>
+            <tr><td class="store-name">苹果湖州万达广场店</td><td>46/36</td><td style="color:#22c55e">108%</td><td>3</td></tr><tr><td class="store-name">苹果上海海梦一方店</td><td>21/20</td><td style="color:#ef4444">67%</td><td>3</td></tr><tr><td class="store-name">苹果上海徐汇万科广场店</td><td>28/28</td><td style="color:#22c55e">114%</td><td>2</td></tr><tr><td class="store-name">苹果上海松江印象城店</td><td>75/88</td><td style="color:#22c55e">95%</td><td>2</td></tr><tr><td class="store-name">苹果嘉兴华府八佰伴店</td><td>40/50</td><td style="color:#ef4444">89%</td><td>2</td></tr><tr><td class="store-name">苹果合肥高新龙湖天街店</td><td>39/48</td><td style="color:#ef4444">89%</td><td>2</td></tr><tr><td class="store-name">苹果上海莘庄龙之梦购物中心店</td><td>45/57</td><td style="color:#ef4444">78%</td><td>1</td></tr><tr><td class="store-name">苹果上海维璟印象城店</td><td>30/35</td><td style="color:#ef4444">59%</td><td>1</td></tr><tr><td class="store-name">苹果嘉兴万达广场店</td><td>35/61</td><td style="color:#ef4444">56%</td><td>1</td></tr><tr><td class="store-name">苹果合肥蜀山万象汇店</td><td>10/17</td><td style="color:#ef4444">31%</td><td>1</td></tr>
+          </tbody></table>
+        </div>
+      </div>
     </div>
   </div>
-
   <!-- P3 销售累计排名 -->
   <div class="tab-content" id="p3">
     <div class="sub-tabs">
-      <button class="sub-tab active" onclick="switchSub('p3','sa')">S/A 赛道</button>
-      <button class="sub-tab" onclick="switchSub('p3','bcd')">B/C/D 赛道</button>
+      <button class="sub-tab active" onclick="switchSubTabP3('sa')">S/A赛道</button>
+      <button class="sub-tab" onclick="switchSubTabP3('bcd')">B/C/D赛道</button>
     </div>
     <div class="sub-content active" id="p3_sa">
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff">Mac</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff">Mac</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州滨江宝龙城店</td><td class="td-sales">张旭2</td><td>4</td><td>52896</td><td>1</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果上海松江印象城店</td><td class="td-sales">杨凯凯</td><td>4</td><td>51496</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果上海松江印象城店</td><td class="td-sales">王国豪</td><td>4</td><td>45996</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌新光汇店</td><td class="td-sales">朱志坤2</td><td>3</td><td>31599</td><td>1</td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">杨康2</td><td>3</td><td>29947</td><td>1</td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州新北万达店</td><td class="td-sales">周操</td><td>3</td><td>29798</td><td>1</td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州永旺梦乐城店</td><td class="td-sales">胡秀彬</td><td>5</td><td>59745</td><td>1</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州滨江宝龙城店</td><td class="td-sales">张旭2</td><td>4</td><td>52896</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果上海松江印象城店</td><td class="td-sales">杨凯凯</td><td>4</td><td>51496</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果上海松江印象城店</td><td class="td-sales">王国豪</td><td>4</td><td>45996</td><td>1</td></tr><tr><td class="td-rank">5</td><td class="td-team">战狼队</td><td class="td-store">苹果上海嘉亭荟店</td><td class="td-sales">李娟</td><td>4</td><td>37796</td><td>1</td></tr><tr><td class="td-rank">6</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">潘萌新</td><td>3</td><td>35097</td><td>1</td></tr>
 </tbody></table></div>
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff">iPad</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff">iPad</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">王舰涛</td><td>7</td><td>61993</td><td>1</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州新北万达店</td><td class="td-sales">陈志鹏</td><td>7</td><td>40597</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州新北万达店</td><td class="td-sales">孙美丽</td><td>6</td><td>40194</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州永旺梦乐城店</td><td class="td-sales">胡秀彬</td><td>6</td><td>40095</td><td>1</td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌新光汇店</td><td class="td-sales">冯梓惊</td><td>6</td><td>37094</td><td>1</td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">陈岱宗</td><td>6</td><td>32895</td><td>1</td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州新北万达店</td><td class="td-sales">陈志鹏</td><td>13</td><td>74892</td><td>2</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">王舰涛</td><td>7</td><td>61993</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州新北万达店</td><td class="td-sales">孙美丽</td><td>6</td><td>40194</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州永旺梦乐城店</td><td class="td-sales">胡秀彬</td><td>6</td><td>40095</td><td>1</td></tr><tr><td class="td-rank">5</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌新光汇店</td><td class="td-sales">冯梓惊</td><td>6</td><td>37094</td><td>1</td></tr><tr><td class="td-rank">6</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">陈岱宗</td><td>6</td><td>32895</td><td>1</td></tr>
 </tbody></table></div>
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#4facfe,#00f2fe);color:#fff">Watch</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#4facfe,#00f2fe);color:#fff">Watch</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌万达店</td><td class="td-sales">朱子豪</td><td>9</td><td>27041</td><td>1</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">黑马队</td><td class="td-store">苹果宁海西子国际店</td><td class="td-sales">杨梦婷</td><td>9</td><td>24091</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">施凤艳</td><td>9</td><td>21891</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州永旺梦乐城店</td><td class="td-sales">胡秀彬</td><td>8</td><td>32592</td><td>1</td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">施凤艳</td><td>8</td><td>21592</td><td>1</td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">陈盛谓2</td><td>7</td><td>17593</td><td>1</td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">施凤艳</td><td>35</td><td>88865</td><td>3</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌万达店</td><td class="td-sales">朱子豪</td><td>20</td><td>53780</td><td>2</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌新光汇店</td><td class="td-sales">黄小雨2</td><td>9</td><td>34691</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">黑马队</td><td class="td-store">苹果宁海西子国际店</td><td class="td-sales">杨梦婷</td><td>9</td><td>24091</td><td>1</td></tr><tr><td class="td-rank">5</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州永旺梦乐城店</td><td class="td-sales">胡秀彬</td><td>8</td><td>32592</td><td>1</td></tr><tr><td class="td-rank">6</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">陈盛谓2</td><td>7</td><td>17593</td><td>1</td></tr>
 </tbody></table></div>
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#43e97b,#38f9d7);color:#fff">iPhone</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#43e97b,#38f9d7);color:#fff">iPhone</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌万达店</td><td class="td-sales">章玮</td><td>28</td><td>260139</td><td>1</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">陈盛谓2</td><td>28</td><td>234279</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">王友琴</td><td>28</td><td>233384</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">陈岱宗</td><td>19</td><td>157486</td><td>1</td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">王舰涛</td><td>18</td><td>154386.01</td><td>1</td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">朱剑</td><td>17</td><td>154386</td><td>1</td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">王舰涛</td><td>33</td><td>280471</td><td>2</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌万达店</td><td class="td-sales">章玮</td><td>28</td><td>260139</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">陈盛谓2</td><td>28</td><td>234279</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">王友琴</td><td>28</td><td>233384</td><td>1</td></tr><tr><td class="td-rank">5</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">陈岱宗</td><td>19</td><td>157486</td><td>1</td></tr><tr><td class="td-rank">6</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">朱剑</td><td>17</td><td>154386</td><td>1</td></tr>
 </tbody></table></div>
     </div>
     <div class="sub-content" id="p3_bcd">
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff">Mac</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff">Mac</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果扬州金鹰店</td><td class="td-sales">陶慧</td><td>4</td><td>46800</td><td>1</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州大厦中央商城店</td><td class="td-sales">孔宣竣</td><td>3</td><td>38099</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">战狼队</td><td class="td-store">苹果上海三林新达汇店</td><td class="td-sales">徐晨曦2</td><td>3</td><td>35997</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">战狼队</td><td class="td-store">苹果上海三林新达汇店</td><td class="td-sales">董万里</td><td>3</td><td>30747</td><td>1</td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果上海维璟广场店</td><td class="td-sales">李秋焕</td><td>2</td><td>21749</td><td>1</td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">黑马队</td><td class="td-store">苹果宁波1902万科广场店</td><td class="td-sales">吴贝贝</td><td>2</td><td>19248</td><td>1</td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果扬州金鹰店</td><td class="td-sales">陶慧</td><td>4</td><td>46800</td><td>1</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州路劲又一城店</td><td class="td-sales">岳锋峰</td><td>4</td><td>41646</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">战狼队</td><td class="td-store">苹果上海金桥国际店</td><td class="td-sales">马鑫鑫</td><td>4</td><td>35546</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果长宁龙之梦店</td><td class="td-sales">刘晓伟</td><td>4</td><td>28496</td><td>1</td></tr><tr><td class="td-rank">5</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州大厦中央商城店</td><td class="td-sales">孔宣竣</td><td>3</td><td>38099</td><td>1</td></tr><tr><td class="td-rank">6</td><td class="td-team">战狼队</td><td class="td-store">苹果上海三林新达汇店</td><td class="td-sales">徐晨曦2</td><td>3</td><td>35997</td><td>1</td></tr>
 </tbody></table></div>
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff">iPad</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff">iPad</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州武进万达店</td><td class="td-sales">朱颖</td><td>7</td><td>10099</td><td>1</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山东港凯虹店</td><td class="td-sales">杨倩雯</td><td>6</td><td>31214</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">战狼队</td><td class="td-store">苹果上海金桥国际店</td><td class="td-sales">汤甜甜</td><td>5</td><td>30796</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">紫气东来队</td><td class="td-store">苹果诸暨青悦城店</td><td class="td-sales">王淑芬</td><td>5</td><td>24695</td><td>1</td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">战狼队</td><td class="td-store">苹果昆山金鹰店</td><td class="td-sales">郭沛</td><td>5</td><td>21397</td><td>1</td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果莘庄龙之梦店</td><td class="td-sales">邹成龙</td><td>4</td><td>32596</td><td>1</td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州武进万达店</td><td class="td-sales">朱颖</td><td>15</td><td>35243</td><td>2</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">谢若璠</td><td>6</td><td>33594</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山东港凯虹店</td><td class="td-sales">杨倩雯</td><td>6</td><td>31214</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">战狼队</td><td class="td-store">苹果昆山金鹰店</td><td class="td-sales">邹静雅</td><td>6</td><td>30994</td><td>1</td></tr><tr><td class="td-rank">5</td><td class="td-team">战狼队</td><td class="td-store">苹果上海金桥国际店</td><td class="td-sales">汤甜甜</td><td>5</td><td>30796</td><td>1</td></tr><tr><td class="td-rank">6</td><td class="td-team">紫气东来队</td><td class="td-store">苹果诸暨青悦城店</td><td class="td-sales">王淑芬</td><td>5</td><td>24695</td><td>1</td></tr>
 </tbody></table></div>
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#4facfe,#00f2fe);color:#fff">Watch</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#4facfe,#00f2fe);color:#fff">Watch</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果镇江吾悦店</td><td class="td-sales">许家明</td><td>8</td><td>24942</td><td>1</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">猛龙队</td><td class="td-store">苹果扬州金鹰店</td><td class="td-sales">韩敏</td><td>8</td><td>20542</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">谢若璠</td><td>7</td><td>22093</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山东港凯虹店</td><td class="td-sales">杨倩雯</td><td>7</td><td>18293</td><td>1</td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果莘庄龙之梦店</td><td class="td-sales">高望</td><td>7</td><td>16893</td><td>1</td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">猛龙队</td><td class="td-store">苹果扬州金鹰店</td><td class="td-sales">孔凡涛</td><td>6</td><td>16594</td><td>1</td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果镇江吾悦店</td><td class="td-sales">许家明</td><td>8</td><td>24942</td><td>1</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州路劲又一城店</td><td class="td-sales">岳锋峰</td><td>8</td><td>23642</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">猛龙队</td><td class="td-store">苹果扬州金鹰店</td><td class="td-sales">韩敏</td><td>8</td><td>20542</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">谢若璠</td><td>7</td><td>22093</td><td>1</td></tr><tr><td class="td-rank">5</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山东港凯虹店</td><td class="td-sales">杨倩雯</td><td>7</td><td>18293</td><td>1</td></tr><tr><td class="td-rank">6</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果莘庄龙之梦店</td><td class="td-sales">高望</td><td>7</td><td>16893</td><td>1</td></tr>
 </tbody></table></div>
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#43e97b,#38f9d7);color:#fff">iPhone</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#43e97b,#38f9d7);color:#fff">iPhone</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州吾悦店</td><td class="td-sales">李晓乐</td><td>24</td><td>220476.2</td><td>1</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">战狼队</td><td class="td-store">苹果上海崇明万达店</td><td class="td-sales">宋丹萍</td><td>24</td><td>191576</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山东港凯虹店</td><td class="td-sales">高蕊蕊</td><td>22</td><td>163578</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州天宁吾悦店</td><td class="td-sales">董亚楠</td><td>17</td><td>124185</td><td>1</td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">杨欣悦</td><td>16</td><td>138434.1</td><td>1</td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州金地广场店</td><td class="td-sales">何国庆</td><td>16</td><td>100287</td><td>1</td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州天宁吾悦店</td><td class="td-sales">董亚楠</td><td>36</td><td>262066</td><td>2</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州吾悦店</td><td class="td-sales">李晓乐</td><td>24</td><td>220476</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">战狼队</td><td class="td-store">苹果上海崇明万达店</td><td class="td-sales">宋丹萍</td><td>24</td><td>191576</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州天宁吾悦店</td><td class="td-sales">羌何霞</td><td>24</td><td>172776</td><td>1</td></tr><tr><td class="td-rank">5</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山东港凯虹店</td><td class="td-sales">高蕊蕊</td><td>22</td><td>163578</td><td>1</td></tr><tr><td class="td-rank">6</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">杨欣悦</td><td>16</td><td>138434</td><td>1</td></tr>
 </tbody></table></div>
     </div>
     <div class="analysis-card">
-      <div class="analysis-title">累计排名</div>
-      <div class="analysis-text"><p>以上为累计销售积分排名（各产品线 TOP6），数据截至 2026-07-16。</p><p>各战队在多产品线上均有亮眼表现。</p></div>
+      <div class="analysis-title">W3 累计排名分析</div>
+      <div class="analysis-text"><p>数据截至 2026-07-18，累计排名依据各销售历史总积分排序。S/A赛道和B/C/D赛道分开排名，每个赛道取TOP6。</p></div>
     </div>
   </div>
-
   <!-- P4 每周龙虎榜 -->
   <div class="tab-content" id="p4">
     <div class="sub-tabs">
-      <button class="sub-tab active" onclick="switchSub('p4','sa')">S/A 赛道</button>
-      <button class="sub-tab" onclick="switchSub('p4','bcd')">B/C/D 赛道</button>
+      <button class="sub-tab active" onclick="switchSubTabP4('sa')">S/A赛道</button>
+      <button class="sub-tab" onclick="switchSubTabP4('bcd')">B/C/D赛道</button>
     </div>
     <div class="sub-content active" id="p4_sa">
-    
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff">Mac</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff">Mac</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州永旺梦乐城店</td><td class="td-sales">胡秀彬</td><td>5</td><td>59745</td><td>1</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">潘萌新</td><td>3</td><td>35097</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">战狼队</td><td class="td-store">苹果上海嘉亭荟店</td><td class="td-sales">李娟</td><td>3</td><td>28547</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">黑马队</td><td class="td-store">苹果余姚万达店</td><td class="td-sales">沈鑫楠</td><td>3</td><td>21147</td><td></td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">战狼队</td><td class="td-store">苹果上海长泰店</td><td class="td-sales">王继虎</td><td>2</td><td>27498</td><td></td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">陈岱宗</td><td>2</td><td>23498</td><td></td></tr>
-<tr><td class="td-rank">7</td><td class="td-team">黑马队</td><td class="td-store">苹果余姚万达店</td><td class="td-sales">郑紫阳</td><td>2</td><td>21298</td><td></td></tr>
-<tr><td class="td-rank">8</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">巩欣萍</td><td>2</td><td>19248</td><td></td></tr>
-<tr><td class="td-rank">9</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州瓯海银泰店</td><td class="td-sales">胡馨怡</td><td>2</td><td>19248</td><td></td></tr>
-<tr><td class="td-rank">10</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果上海松江印象城店</td><td class="td-sales">王国豪</td><td>2</td><td>17498</td><td></td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州永旺梦乐城店</td><td class="td-sales">胡秀彬</td><td>5</td><td>59745</td><td>1</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">战狼队</td><td class="td-store">苹果上海嘉亭荟店</td><td class="td-sales">李娟</td><td>4</td><td>37796</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">潘萌新</td><td>3</td><td>35097</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">陈盛谓2</td><td>3</td><td>29297</td><td></td></tr><tr><td class="td-rank">5</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">施凤艳</td><td>3</td><td>21897</td><td></td></tr><tr><td class="td-rank">6</td><td class="td-team">黑马队</td><td class="td-store">苹果余姚万达店</td><td class="td-sales">沈鑫楠</td><td>3</td><td>21147</td><td></td></tr><tr><td class="td-rank">7</td><td class="td-team">战狼队</td><td class="td-store">苹果上海长泰店</td><td class="td-sales">王继虎</td><td>2</td><td>27498</td><td></td></tr><tr><td class="td-rank">8</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">陈岱宗</td><td>2</td><td>23498</td><td></td></tr><tr><td class="td-rank">9</td><td class="td-team">黑马队</td><td class="td-store">苹果余姚万达店</td><td class="td-sales">苏欣然</td><td>2</td><td>21498</td><td></td></tr><tr><td class="td-rank">10</td><td class="td-team">黑马队</td><td class="td-store">苹果余姚万达店</td><td class="td-sales">郑紫阳</td><td>2</td><td>21298</td><td></td></tr>
 </tbody></table></div>
-    
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff">iPad</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff">iPad</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">朱剑</td><td>5</td><td>25895</td><td>1</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">瞿翔</td><td>4</td><td>20896</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">黑马队</td><td class="td-store">苹果余姚万达店</td><td class="td-sales">凌红</td><td>4</td><td>20496</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">陈盛谓2</td><td>4</td><td>20397</td><td></td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌万达店</td><td class="td-sales">章玮</td><td>3</td><td>23097</td><td></td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">黑马队</td><td class="td-store">苹果宁海西子国际店</td><td class="td-sales">王鑫权</td><td>3</td><td>21097</td><td></td></tr>
-<tr><td class="td-rank">7</td><td class="td-team">战狼队</td><td class="td-store">苹果上海嘉亭荟店</td><td class="td-sales">王婕妤</td><td>3</td><td>20897</td><td></td></tr>
-<tr><td class="td-rank">8</td><td class="td-team">黑马队</td><td class="td-store">苹果余姚万达店</td><td class="td-sales">王英</td><td>3</td><td>15097</td><td></td></tr>
-<tr><td class="td-rank">9</td><td class="td-team">战狼队</td><td class="td-store">苹果上海嘉亭荟店</td><td class="td-sales">杨绪凤</td><td>3</td><td>13197</td><td></td></tr>
-<tr><td class="td-rank">10</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">叶思佳</td><td>3</td><td>12397</td><td></td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州新北万达店</td><td class="td-sales">陈志鹏</td><td>6</td><td>34295</td><td>1</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">黑马队</td><td class="td-store">苹果宁海西子国际店</td><td class="td-sales">王鑫权</td><td>5</td><td>31495</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">黑马队</td><td class="td-store">苹果余姚万达店</td><td class="td-sales">凌红</td><td>5</td><td>31295</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">朱剑</td><td>5</td><td>25895</td><td></td></tr><tr><td class="td-rank">5</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">瞿翔</td><td>5</td><td>25195</td><td></td></tr><tr><td class="td-rank">6</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州永旺梦乐城店</td><td class="td-sales">胡秀彬</td><td>4</td><td>26596</td><td></td></tr><tr><td class="td-rank">7</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">周家谐</td><td>4</td><td>26396</td><td></td></tr><tr><td class="td-rank">8</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">陈盛谓2</td><td>4</td><td>20397</td><td></td></tr><tr><td class="td-rank">9</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">叶思佳</td><td>4</td><td>18196</td><td></td></tr><tr><td class="td-rank">10</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌万达店</td><td class="td-sales">朱浩田</td><td>4</td><td>17396</td><td></td></tr>
 </tbody></table></div>
-    
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#4facfe,#00f2fe);color:#fff">Watch</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#4facfe,#00f2fe);color:#fff">Watch</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">施凤艳</td><td>13</td><td>32487</td><td>1</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌万达店</td><td class="td-sales">朱子豪</td><td>7</td><td>16993</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌新光汇店</td><td class="td-sales">黄小雨2</td><td>6</td><td>23194</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">陈岱宗</td><td>6</td><td>19794</td><td></td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州永旺梦乐城店</td><td class="td-sales">田红杰</td><td>5</td><td>13295</td><td></td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">黑马队</td><td class="td-store">苹果宁海西子国际店</td><td class="td-sales">秦礼意</td><td>5</td><td>12895</td><td></td></tr>
-<tr><td class="td-rank">7</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">王友琴</td><td>5</td><td>12795</td><td></td></tr>
-<tr><td class="td-rank">8</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州永旺梦乐城店</td><td class="td-sales">方莉平</td><td>5</td><td>12695</td><td></td></tr>
-<tr><td class="td-rank">9</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌新光汇店</td><td class="td-sales">何萍</td><td>5</td><td>12645</td><td></td></tr>
-<tr><td class="td-rank">10</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州瓯海银泰店</td><td class="td-sales">张思雨</td><td>5</td><td>12045</td><td></td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">施凤艳</td><td>18</td><td>45382</td><td>1</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌万达店</td><td class="td-sales">朱子豪</td><td>11</td><td>26739</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌新光汇店</td><td class="td-sales">黄小雨2</td><td>9</td><td>34691</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山宝龙店</td><td class="td-sales">陈岱宗</td><td>8</td><td>24992</td><td></td></tr><tr><td class="td-rank">5</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌新光汇店</td><td class="td-sales">何萍</td><td>8</td><td>20542</td><td></td></tr><tr><td class="td-rank">6</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">王友琴</td><td>7</td><td>18593</td><td></td></tr><tr><td class="td-rank">7</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州新北万达店</td><td class="td-sales">陈志鹏</td><td>7</td><td>17243</td><td></td></tr><tr><td class="td-rank">8</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州滨江宝龙城店</td><td class="td-sales">张旭2</td><td>6</td><td>23394</td><td></td></tr><tr><td class="td-rank">9</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">叶思佳</td><td>6</td><td>18544</td><td></td></tr><tr><td class="td-rank">10</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州新北万达店</td><td class="td-sales">胡静静</td><td>6</td><td>15994</td><td></td></tr>
 </tbody></table></div>
-    
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#43e97b,#38f9d7);color:#fff">iPhone</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#43e97b,#38f9d7);color:#fff">iPhone</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">黑马队</td><td class="td-store">苹果余姚万达店</td><td class="td-sales">凌红</td><td>14</td><td>115788.08</td><td>1</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">黑马队</td><td class="td-store">苹果余姚万达店</td><td class="td-sales">苏欣然</td><td>13</td><td>109687</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州滨江宝龙城店</td><td class="td-sales">张旭2</td><td>13</td><td>109587</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果上海松江印象城店</td><td class="td-sales">江琦琦</td><td>12</td><td>100888</td><td></td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">王舰涛</td><td>12</td><td>95888</td><td></td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州瓯海银泰店</td><td class="td-sales">胡馨怡</td><td>11</td><td>91789</td><td></td></tr>
-<tr><td class="td-rank">7</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">朱剑</td><td>11</td><td>85289</td><td></td></tr>
-<tr><td class="td-rank">8</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">谢菁菁</td><td>10</td><td>82392</td><td></td></tr>
-<tr><td class="td-rank">9</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌万达店</td><td class="td-sales">袁洋辉</td><td>10</td><td>81991</td><td></td></tr>
-<tr><td class="td-rank">10</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州瓯海银泰店</td><td class="td-sales">张思雨</td><td>10</td><td>78390</td><td></td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">黑马队</td><td class="td-store">苹果余姚万达店</td><td class="td-sales">苏欣然</td><td>17</td><td>136783</td><td>1</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">黑马队</td><td class="td-store">苹果余姚万达店</td><td class="td-sales">凌红</td><td>16</td><td>127786</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">王舰涛</td><td>15</td><td>126085</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">陈盛谓2</td><td>15</td><td>115485</td><td></td></tr><tr><td class="td-rank">5</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州永旺梦乐城店</td><td class="td-sales">胡秀彬</td><td>15</td><td>104788</td><td></td></tr><tr><td class="td-rank">6</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州滨江宝龙城店</td><td class="td-sales">张旭2</td><td>14</td><td>115586</td><td></td></tr><tr><td class="td-rank">7</td><td class="td-team">战狼队</td><td class="td-store">苹果上海长泰店</td><td class="td-sales">梁孝杰</td><td>14</td><td>108886</td><td></td></tr><tr><td class="td-rank">8</td><td class="td-team">紫气东来队</td><td class="td-store">苹果义乌之心店</td><td class="td-sales">朱剑</td><td>14</td><td>107986</td><td></td></tr><tr><td class="td-rank">9</td><td class="td-team">紫气东来队</td><td class="td-store">苹果温州龙湾万达店</td><td class="td-sales">谢菁菁</td><td>13</td><td>102689</td><td></td></tr><tr><td class="td-rank">10</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州新北万达店</td><td class="td-sales">丁梦琪</td><td>13</td><td>96287</td><td></td></tr>
 </tbody></table></div>
     </div>
     <div class="sub-content" id="p4_bcd">
-    
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff">Mac</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#667eea,#764ba2);color:#fff">Mac</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">苹果常州路劲又一城店</td><td class="td-store">岳锋峰</td><td class="td-sales">4</td><td>41646</td><td>1</td><td>猛龙队</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">苹果常州新北万达店</td><td class="td-store">孙美丽</td><td class="td-sales">3</td><td>31397</td><td>1</td><td>黑马队</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">苹果上海世博源店</td><td class="td-store">赵浦</td><td class="td-sales">2</td><td>26698</td><td>1</td><td>战狼队</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">苹果昆山昆城广场店</td><td class="td-store">何佳</td><td class="td-sales">2</td><td>22298</td><td></td><td>猛龙队</td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">苹果绍兴八佰伴店</td><td class="td-store">周心怡</td><td class="td-sales">2</td><td>19248</td><td></td><td>猛龙队</td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">苹果舟山东港凯虹店</td><td class="td-store">高雪艳</td><td class="td-sales">2</td><td>15698</td><td></td><td>猛龙队</td></tr>
-<tr><td class="td-rank">7</td><td class="td-team">苹果扬州金鹰店</td><td class="td-store">陶慧</td><td class="td-sales">2</td><td>15548</td><td></td><td>橙锋突击队</td></tr>
-<tr><td class="td-rank">8</td><td class="td-team">苹果南京弘阳店</td><td class="td-store">杨欣悦</td><td class="td-sales">2</td><td>15548</td><td></td><td>橙锋突击队</td></tr>
-<tr><td class="td-rank">9</td><td class="td-team">苹果莘庄龙之梦店</td><td class="td-store">王冠</td><td class="td-sales">2</td><td>15398</td><td></td><td>战狼队</td></tr>
-<tr><td class="td-rank">10</td><td class="td-team">苹果上虞万达店</td><td class="td-store">赵铮宇</td><td class="td-sales">2</td><td>15298</td><td></td><td>猛龙队</td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州路劲又一城店</td><td class="td-sales">岳锋峰</td><td>4</td><td>41646</td><td>1</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">战狼队</td><td class="td-store">苹果上海金桥国际店</td><td class="td-sales">马鑫鑫</td><td>4</td><td>35546</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果长宁龙之梦店</td><td class="td-sales">刘晓伟</td><td>4</td><td>28496</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州新北万达店</td><td class="td-sales">孙美丽</td><td>3</td><td>31397</td><td></td></tr><tr><td class="td-rank">5</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果莘庄龙之梦店</td><td class="td-sales">王冠</td><td>3</td><td>20397</td><td></td></tr><tr><td class="td-rank">6</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">陈嘉乐</td><td>3</td><td>17197</td><td></td></tr><tr><td class="td-rank">7</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果长宁龙之梦店</td><td class="td-sales">陈士辉</td><td>3</td><td>16797</td><td></td></tr><tr><td class="td-rank">8</td><td class="td-team">战狼队</td><td class="td-store">苹果上海金桥国际店</td><td class="td-sales">谌洁</td><td>2</td><td>29648</td><td></td></tr><tr><td class="td-rank">9</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果上海世博源店</td><td class="td-sales">赵浦</td><td>2</td><td>26698</td><td></td></tr><tr><td class="td-rank">10</td><td class="td-team">战狼队</td><td class="td-store">苹果昆山昆城广场店</td><td class="td-sales">何佳</td><td>2</td><td>22298</td><td></td></tr>
 </tbody></table></div>
-    
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff">iPad</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#f093fb,#f5576c);color:#fff">iPad</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州武进万达店</td><td class="td-sales">朱颖</td><td>7</td><td>20945</td><td>1</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山东港凯虹店</td><td class="td-sales">高雪艳</td><td>5</td><td>22795</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">战狼队</td><td class="td-store">苹果昆山金鹰店</td><td class="td-sales">邹静雅</td><td>4</td><td>22696</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">谢若璠</td><td>4</td><td>18096</td><td></td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">猛龙队</td><td class="td-store">苹果扬州金鹰店</td><td class="td-sales">陶慧</td><td>4</td><td>16996</td><td></td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">猛龙队</td><td class="td-store">苹果扬州金鹰店</td><td class="td-sales">孔凡涛</td><td>3</td><td>18497</td><td></td></tr>
-<tr><td class="td-rank">7</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果上海海梦一方店</td><td class="td-sales">余文静</td><td>3</td><td>17297</td><td></td></tr>
-<tr><td class="td-rank">8</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果嘉兴八佰伴华府店</td><td class="td-sales">叶嘉勇</td><td>3</td><td>16397</td><td></td></tr>
-<tr><td class="td-rank">9</td><td class="td-team">战狼队</td><td class="td-store">苹果上海青浦吾悦店</td><td class="td-sales">尹雯慧</td><td>3</td><td>16297</td><td></td></tr>
-<tr><td class="td-rank">10</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州龙城天街店</td><td class="td-sales">李娜2</td><td>3</td><td>13697</td><td></td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州武进万达店</td><td class="td-sales">朱颖</td><td>8</td><td>25144</td><td>1</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">谢若璠</td><td>6</td><td>33594</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">战狼队</td><td class="td-store">苹果昆山金鹰店</td><td class="td-sales">邹静雅</td><td>6</td><td>30994</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山东港凯虹店</td><td class="td-sales">高雪艳</td><td>5</td><td>22795</td><td></td></tr><tr><td class="td-rank">5</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州飞龙吾悦店</td><td class="td-sales">陈亚萍2</td><td>4</td><td>21296</td><td></td></tr><tr><td class="td-rank">6</td><td class="td-team">猛龙队</td><td class="td-store">苹果扬州金鹰店</td><td class="td-sales">陶慧</td><td>4</td><td>16996</td><td></td></tr><tr><td class="td-rank">7</td><td class="td-team">黑马队</td><td class="td-store">苹果宁波1902万科广场店</td><td class="td-sales">丁宇</td><td>4</td><td>16196</td><td></td></tr><tr><td class="td-rank">8</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州龙城天街店</td><td class="td-sales">程文婧</td><td>4</td><td>16096</td><td></td></tr><tr><td class="td-rank">9</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州天宁吾悦店</td><td class="td-sales">羌何霞</td><td>3</td><td>19597</td><td></td></tr><tr><td class="td-rank">10</td><td class="td-team">猛龙队</td><td class="td-store">苹果扬州金鹰店</td><td class="td-sales">孔凡涛</td><td>3</td><td>18497</td><td></td></tr>
 </tbody></table></div>
-    
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#4facfe,#00f2fe);color:#fff">Watch</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#4facfe,#00f2fe);color:#fff">Watch</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州路劲又一城店</td><td class="td-sales">岳锋峰</td><td>7</td><td>21143</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">战狼队</td><td class="td-store">苹果昆山金鹰店</td><td class="td-sales">邹静雅</td><td>5</td><td>17095</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">杨欣悦</td><td>5</td><td>13295</td><td></td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">战狼队</td><td class="td-store">苹果上海青浦吾悦店</td><td class="td-sales">杨峰1</td><td>5</td><td>12795</td><td></td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果合肥高新龙湖天街店</td><td class="td-sales">郭为杰</td><td>5</td><td>11545</td><td></td></tr>
-<tr><td class="td-rank">7</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果上海维璟广场店</td><td class="td-sales">程涛</td><td>4</td><td>13996</td><td></td></tr>
-<tr><td class="td-rank">8</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州天宁吾悦店</td><td class="td-sales">丁俐</td><td>4</td><td>10196</td><td></td></tr>
-<tr><td class="td-rank">9</td><td class="td-team">紫气东来队</td><td class="td-store">苹果诸暨青悦城店</td><td class="td-sales">杨笙怡</td><td>4</td><td>10196</td><td></td></tr>
-<tr><td class="td-rank">10</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山东港凯虹店</td><td class="td-sales">竺思思</td><td>4</td><td>9946</td><td></td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州路劲又一城店</td><td class="td-sales">岳锋峰</td><td>8</td><td>23642</td><td>1</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">杨欣悦</td><td>6</td><td>15994</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">战狼队</td><td class="td-store">苹果上海青浦吾悦店</td><td class="td-sales">杨峰1</td><td>6</td><td>15494</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">猛龙队</td><td class="td-store">苹果镇江吾悦店</td><td class="td-sales">潘江慧</td><td>6</td><td>15094</td><td></td></tr><tr><td class="td-rank">5</td><td class="td-team">战狼队</td><td class="td-store">苹果昆山金鹰店</td><td class="td-sales">席燕</td><td>6</td><td>14944</td><td></td></tr><tr><td class="td-rank">6</td><td class="td-team">战狼队</td><td class="td-store">苹果上海崇明万达店</td><td class="td-sales">宋丹萍</td><td>6</td><td>14494</td><td></td></tr><tr><td class="td-rank">7</td><td class="td-team">橙锋突击队</td><td class="td-store">苹果合肥高新龙湖天街店</td><td class="td-sales">郭为杰</td><td>6</td><td>14244</td><td></td></tr><tr><td class="td-rank">8</td><td class="td-team">黑马队</td><td class="td-store">苹果舟山东港凯虹店</td><td class="td-sales">高雪艳</td><td>6</td><td>14094</td><td></td></tr><tr><td class="td-rank">9</td><td class="td-team">战狼队</td><td class="td-store">苹果昆山金鹰店</td><td class="td-sales">邹静雅</td><td>5</td><td>17095</td><td></td></tr><tr><td class="td-rank">10</td><td class="td-team">紫气东来队</td><td class="td-store">苹果绍兴八佰伴店</td><td class="td-sales">周心怡</td><td>5</td><td>13245</td><td></td></tr>
 </tbody></table></div>
-    
-      <div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#43e97b,#38f9d7);color:#fff">iPhone</div>
+<div class="product-section"><div class="prod-header" style="background:linear-gradient(135deg,#43e97b,#38f9d7);color:#fff">iPhone</div>
         <table class="sales-table"><thead><tr><th>排名</th><th>战队</th><th>门店</th><th>销售</th><th>台量</th><th>销售额</th><th>积分</th></tr></thead><tbody>
-<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州天宁吾悦店</td><td class="td-sales">董亚楠</td><td>18</td><td>132082</td><td>1</td></tr>
-<tr><td class="td-rank">🥈</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州天宁吾悦店</td><td class="td-sales">羌何霞</td><td>16</td><td>106784</td><td>1</td></tr>
-<tr><td class="td-rank">🥉</td><td class="td-team">猛龙队</td><td class="td-store">苹果镇江吾悦店</td><td class="td-sales">张妍</td><td>15</td><td>108285</td><td>1</td></tr>
-<tr><td class="td-rank">4</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">陈嘉乐</td><td>12</td><td>86688</td><td></td></tr>
-<tr><td class="td-rank">5</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果上海世博源店</td><td class="td-sales">黄强</td><td>11</td><td>97089</td><td></td></tr>
-<tr><td class="td-rank">6</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州武进万达店</td><td class="td-sales">朱颖</td><td>11</td><td>83794.64</td><td></td></tr>
-<tr><td class="td-rank">7</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果上海紫荆广场店</td><td class="td-sales">许国强</td><td>9</td><td>80192</td><td></td></tr>
-<tr><td class="td-rank">8</td><td class="td-team">战狼队</td><td class="td-store">苹果昆山金鹰店</td><td class="td-sales">席燕</td><td>9</td><td>74391</td><td></td></tr>
-<tr><td class="td-rank">9</td><td class="td-team">战狼队</td><td class="td-store">苹果上海唐镇阳光天地店</td><td class="td-sales">金湘淑</td><td>9</td><td>68392</td><td></td></tr>
-<tr><td class="td-rank">10</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果杭州七堡花园城店</td><td class="td-sales">王健国</td><td>9</td><td>66191</td><td></td></tr>
+<tr><td class="td-rank">🥇</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州天宁吾悦店</td><td class="td-sales">羌何霞</td><td>24</td><td>172776</td><td>1</td></tr><tr><td class="td-rank">🥈</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州天宁吾悦店</td><td class="td-sales">董亚楠</td><td>19</td><td>137881</td><td>1</td></tr><tr><td class="td-rank">🥉</td><td class="td-team">猛龙队</td><td class="td-store">苹果镇江吾悦店</td><td class="td-sales">张妍</td><td>16</td><td>110384</td><td>1</td></tr><tr><td class="td-rank">4</td><td class="td-team">猛龙队</td><td class="td-store">苹果南京弘阳店</td><td class="td-sales">陈嘉乐</td><td>15</td><td>113085</td><td></td></tr><tr><td class="td-rank">5</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州路劲又一城店</td><td class="td-sales">顾溶</td><td>14</td><td>110086</td><td></td></tr><tr><td class="td-rank">6</td><td class="td-team">猛龙队</td><td class="td-store">苹果常州武进万达店</td><td class="td-sales">朱颖</td><td>14</td><td>104692</td><td></td></tr><tr><td class="td-rank">7</td><td class="td-team">战狼队</td><td class="td-store">苹果昆山金鹰店</td><td class="td-sales">席燕</td><td>13</td><td>117987</td><td></td></tr><tr><td class="td-rank">8</td><td class="td-team">黑马队</td><td class="td-store">苹果台州万达店</td><td class="td-sales">王程志</td><td>13</td><td>102587</td><td></td></tr><tr><td class="td-rank">9</td><td class="td-team">战狼队</td><td class="td-store">苹果上海青浦吾悦店</td><td class="td-sales">尹雯慧</td><td>13</td><td>96587</td><td></td></tr><tr><td class="td-rank">10</td><td class="td-team">绿势先锋队</td><td class="td-store">苹果上海世博源店</td><td class="td-sales">黄强</td><td>12</td><td>108388</td><td></td></tr>
 </tbody></table></div>
     </div>
     <div class="analysis-card">
       <div class="analysis-title">W3 每周龙虎榜</div>
-      <div class="analysis-text"><p>以上为 W3 单周销售龙虎榜（各产品线 TOP10），数据截至 2026-07-16。</p></div>
-    </div></div>
+      <div class="analysis-text"><p>W3周（7.13-7.18）各产品线销售龙虎榜，S/A赛道和B/C/D赛道分开排名，取TOP10。数据截至 2026-07-18。</p></div>
+    </div>
   </div>
 
+  <div class="footer"></div>
 </div>
-
 <script>
 function switchTab(id) {
-  document.querySelectorAll('.tab-btn').forEach((b,i)=>{b.classList.toggle('active', b.textContent.includes(id.toUpperCase()));});
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
   document.getElementById(id).classList.add('active');
+  var btns=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<btns.length;i++){if(btns[i].textContent.includes(id.toUpperCase()))btns[i].classList.add('active');}
 }
-function switchSub(parent, sub) {
-  document.querySelectorAll('#p'+parent.slice(1)+' .sub-tab').forEach(b=>b.classList.remove('active'));
-  document.querySelectorAll('#p'+parent.slice(1)+' .sub-content').forEach(c=>c.classList.remove('active'));
-  event.target.classList.add('active');
-  document.getElementById(parent+'_'+sub).classList.add('active');
+function switchSubTabP3(track) {
+  document.querySelectorAll('#p3 .sub-tab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('#p3 .sub-content').forEach(c=>c.classList.remove('active'));
+  document.getElementById('p3_'+track).classList.add('active');
+  var subs=document.querySelectorAll('#p3 .sub-tab');
+  subs[track==='sa'?0:1].classList.add('active');
+}
+function switchSubTabP4(track) {
+  document.querySelectorAll('#p4 .sub-tab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('#p4 .sub-content').forEach(c=>c.classList.remove('active'));
+  document.getElementById('p4_'+track).classList.add('active');
+  var subs=document.querySelectorAll('#p4 .sub-tab');
+  subs[track==='sa'?0:1].classList.add('active');
 }
 </script>
 </body>
