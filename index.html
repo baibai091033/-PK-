@@ -41,6 +41,13 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
 .stat-value { font-size:16px; font-weight:700; color:#667eea; }
 .stat-label { font-size:9px; color:#9ca3af; }
 
+/* P1战队卡片：底部两行缩小 */
+#p1 .team-stats .stat-value { font-size:11px; font-weight:600; }
+#p1 .team-stats .stat-label { font-size:8px; }
+/* P1战队卡片：综合得分大字突出 */
+.team-score-badge { font-size:20px; font-weight:700; color:#667eea; margin-left:6px; }
+.team-score-label { font-size:9px; color:#9ca3af; font-weight:400; }
+
 .product-lines { display:flex; flex-direction:column; gap:4px; }
 .product-line { display:flex; align-items:center; gap:6px; }
 .pl-name { width:40px; font-size:9px; font-weight:600; color:#6b7280; }
@@ -125,7 +132,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
     </div>
     <div class="team-card">
     <div class="team-header">
-      <div><div class="team-name">绿势先锋队 <span style="font-size:13px;font-weight:600;color:#667eea;margin-left:6px">2.85</span></div><div class="team-leaders">队长：徐峰、赵虎</div></div>
+      <div><div class="team-name">绿势先锋队 <span class="team-score-label" style="margin-left:6px">综合得分 </span><span class="team-score-badge">2.85</span></div><div class="team-leaders">队长：徐峰、赵虎</div></div>
       <div class="team-rank" style="color:#FFD700">🥇</div>
     </div>
     <div class="team-stats">
@@ -143,7 +150,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
   </div>
 <div class="team-card">
     <div class="team-header">
-      <div><div class="team-name">黑马队 <span style="font-size:13px;font-weight:600;color:#667eea;margin-left:6px">2.29</span></div><div class="team-leaders">队长：巫文强、金国庆</div></div>
+      <div><div class="team-name">黑马队 <span class="team-score-label" style="margin-left:6px">综合得分 </span><span class="team-score-badge">2.29</span></div><div class="team-leaders">队长：巫文强、金国庆</div></div>
       <div class="team-rank" style="color:#C0C0C0">🥈</div>
     </div>
     <div class="team-stats">
@@ -161,7 +168,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
   </div>
 <div class="team-card">
     <div class="team-header">
-      <div><div class="team-name">战狼队 <span style="font-size:13px;font-weight:600;color:#667eea;margin-left:6px">2.26</span></div><div class="team-leaders">队长：侯丝雨、杨桐</div></div>
+      <div><div class="team-name">战狼队 <span class="team-score-label" style="margin-left:6px">综合得分 </span><span class="team-score-badge">2.26</span></div><div class="team-leaders">队长：侯丝雨、杨桐</div></div>
       <div class="team-rank" style="color:#CD7F32">🥉</div>
     </div>
     <div class="team-stats">
@@ -179,7 +186,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
   </div>
 <div class="team-card">
     <div class="team-header">
-      <div><div class="team-name">猛龙队 <span style="font-size:13px;font-weight:600;color:#667eea;margin-left:6px">1.98</span></div><div class="team-leaders">队长：周翔、张芮</div></div>
+      <div><div class="team-name">猛龙队 <span class="team-score-label" style="margin-left:6px">综合得分 </span><span class="team-score-badge">1.98</span></div><div class="team-leaders">队长：周翔、张芮</div></div>
       <div class="team-rank" style="color:#9ca3af">#4</div>
     </div>
     <div class="team-stats">
@@ -197,7 +204,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
   </div>
 <div class="team-card">
     <div class="team-header">
-      <div><div class="team-name">橙锋突击队 <span style="font-size:13px;font-weight:600;color:#667eea;margin-left:6px">1.73</span></div><div class="team-leaders">队长：王丽、陈佩珊</div></div>
+      <div><div class="team-name">橙锋突击队 <span class="team-score-label" style="margin-left:6px">综合得分 </span><span class="team-score-badge">1.73</span></div><div class="team-leaders">队长：王丽、陈佩珊</div></div>
       <div class="team-rank" style="color:#9ca3af">#5</div>
     </div>
     <div class="team-stats">
@@ -215,7 +222,7 @@ body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hi
   </div>
 <div class="team-card">
     <div class="team-header">
-      <div><div class="team-name">紫气东来队 <span style="font-size:13px;font-weight:600;color:#667eea;margin-left:6px">1.49</span></div><div class="team-leaders">队长：胡江虹、吴秀英</div></div>
+      <div><div class="team-name">紫气东来队 <span class="team-score-label" style="margin-left:6px">综合得分 </span><span class="team-score-badge">1.49</span></div><div class="team-leaders">队长：胡江虹、吴秀英</div></div>
       <div class="team-rank" style="color:#9ca3af">#6</div>
     </div>
     <div class="team-stats">
